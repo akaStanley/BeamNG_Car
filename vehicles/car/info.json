@@ -1,0 +1,23 @@
+{
+	"Name":"Car",
+	"Brand":"Spencer",
+	"Transmission":"Manual",
+	"Drivetrain":"FWD",
+	"Type":"Car",
+	"Derby Class":"Sub-Compact Car",
+	"default_pc":"stock_M",
+	"default_color":"St Moritz Silver NH62M",
+	"colors":{
+		"St Moritz Silver NH62M": "0.745 0.745 0.745 0.925",
+		"Tudor Red R38M": "0.737 0.004 0.024 0.959",
+		"Inverness Blue Black B14M": "0.0 0.02 0.192 1.091",
+		"Richmond Green G51M": "0.067 0.357 0.169 0.992",
+		"Victoria Red R39": "0.600 0.004 0.020 1.397",
+		"Carnaby Yellow Y38": "0.863 0.675 0.125 1.446",
+		"Cheyenne Gold YR27M": "0.761 0.392 0.008 1.016",
+		"Shetland White NH61": "0.914 0.910 0.812 1.372",
+		"Black Metallic": "0.004 0.004 0.004 1.223",
+		"Paisley Red R43M": "0.706 0.071 0.090 1.182", 
+		"Savoy Brown YR52M": "0.329 0.133 0.027 1.149"
+		}
+}
