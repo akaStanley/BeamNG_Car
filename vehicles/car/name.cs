@@ -1,1 +1,0 @@
-%vehicleName = "Car";

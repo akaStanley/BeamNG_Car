@@ -1,0 +1,1 @@
+%vehicleName = "Midget";
