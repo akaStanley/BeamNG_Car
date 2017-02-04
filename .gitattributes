@@ -3,6 +3,7 @@
 
 # Custom for Visual Studio
 *.cs     diff=csharp
+*.jbeam  diff=json
 
 # Standard to msysgit
 *.doc	 diff=astextplain
