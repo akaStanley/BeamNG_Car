@@ -5,13 +5,17 @@
 			"authors":"Spencer"
 			},
 		"slotType":"main",
-		
+		"slots": [
+		["type", "default", "description"]
+		["midget_engine","midget_engine","Example Car Engine"],		
+	],
 		"refNodes":[
 		["ref:", "back:", "left:", "up:"]
 		["n65", "n55", "nl63", "n66"]
 		],
 		//camera REF must be at 0,0,0. then back, left, up must be straight lines away in their respective directions for it to work.
-		
+	
+
 		"cameraChase":{
 			"distance":6.1,
 			"distanceMin":2,
@@ -74,7 +78,7 @@
 		  //["nr102","nl99"], //front axle (beam from Left to right)
 			//["nr31","nl28"],	//rear axle
         //front
-        {"propulsed":0}
+        {"propulsed":1}
         {"selfCollision":false}
         {"collision":true}
         {"axleBeams":["nr102","nl99",]} //connects the inner hub of each wheel
@@ -91,61 +95,16 @@
         {"selfCollision":false}
         {"collision":true}
         {"axleBeams":["nr31","nl28",]}
-        ["RL", "wheel_RL_g", "nl27", "nl28", 9999,  "nl29", -1],
+        ["RR", "wheel_RL_g", "nl27", "nl28", 9999,  "nl29", -1],
         {"axleBeams":["nl28","nr31"]}
-        ["RR", "wheel_RR_g", "nr33", "nr31", 9999,  "nr32", -1],
+        ["RL", "wheel_RR_g", "nr33", "nr31", 9999,  "nr32", -1],
         {"axleBeams":[]}
         {"enableABS":false}
         {"selfCollision":true}
     ],
 	
 	
-		"enginetorque":[
-        ["rpm", "torque"] //Torque curve
-        //[0, 0],
-        //[500, 60],
-        //[1000, 73],
-        //[2000, 93],
-        //[3000, 115],
-        //[4000, 132],
-        //[4500, 134],
-        //[5000, 135],
-        //[6000, 134],
-        //[7000, 114],
-        //[7500, 90],
-		[0, 0],
-		[500, 1000],
-		[1000, 1000],
-		[2000, 1000],
-		[3000, 1000],
-		[4000, 1000],
-		[5000, 1000],
-		[6000, 1000],
-    ],
-    "engine":{
-        "idleRPM":1000, //Idling RPM
-        "shiftDownRPM":3400, //Down shift, for automatic
-        "shiftUpRPM":6400, //Up shift, for automatic
-        "maxRPM":7500, //Max RPM for the engine, basically a redline. 
-        "inertia":0.08,
-        "friction":16
-        "brakingCoefRPS":0.15
-        "burnEfficiency":0.5
-        "throttleSensitivity":1.2
-         
-        //transmission section
-        "transmissionType":"manual", //Automatic or manual, setting automatic will restrict the use of manual mode while playing.
-        "lowShiftDownRPM":1400,
-        "lowShiftUpRPM":3600,
-        "highShiftDownRPM":3300,
-        "highShiftUpRPM":6000,
-        // -1, 0 (neutral), 1, etc
-        "gears":[-3.25, 0, 3.15, 2.1, 1.36, 1.0, 0.7]
-        "clutchDuration":0.25
-        "viscousCoupling":3.5
-        "lockingTorqueLimit":150
-        "enableLocking":true
-        },
+
 		
 		
 	
@@ -298,6 +257,24 @@
 			["id1:", "id2:"],
 			["nr102","nl99"], //front axle (beam from Left to right)
 			["nr31","nl28"],	//rear axle
+			
+			["nr57","nr58"],
+			["nr67","nr68"],
+			["nr77","nr78"],
+			["nl53","nl54"],
+			["nl63","nl64"],
+			["nl74","nl73"],
+			
+			["n65","nl72"],
+			["n65","nr79"],
+			["nl71","n66"],
+			["nr80","n66"],
+			
+			["nl61","n56"],
+			["nr69","n56"],
+			
+
+			
 			["nl27","nl49"],
 			["nr33","nr50"],
 			["nr113","nr97"],
@@ -404,7 +381,6 @@
 			["nl10","nl20"],
 			["nl8","nl5"],
 			["nr57","nl29"],
-			["nr31","nr32"],
 			["n87","n95"],
 			["nl127","nl100"],
 			["n55","nr57"],
@@ -424,7 +400,6 @@
 			["nl29","nr32"],
 			["nr131","nr132"],
 			["nl34","nl21"],
-			["nl99","nl100"],
 			["nl126","nr50"],
 			["nl107","nl99"],
 			["nl83","nr88"],
@@ -483,7 +458,6 @@
 			["nl12","nl0"],
 			["n110","nr112"],
 			["nl63","nl53"],
-			["nr102","nr103"],
 			["nl81","nr9"],
 			["nl8","nr38"],
 			["nl10","nl12"],
@@ -544,7 +518,6 @@
 			["nl34","nr45"],
 			["n7","nl5"],
 			["nr31","nl29"],
-			["nl28","nl29"],
 			["nl52","nr59"],
 			["nr31","nr26"],
 			["nr3","nr6"],
@@ -1427,6 +1400,16 @@
 			["nl28","nl20"],
 			["nl20","nl40"],
 			["nl47","nl28"],
+			
+			//suspension beams kinda
+			{"beamSpring":20000, "beamDamp":200},
+			{"beamDeform":"FLT_MAX", "beamStrength":"FLT_MAX"},
+			["nr31","nr32"],
+			["nl28","nl29"],
+			["nl99","nl100"],
+			["nr102","nr103"],
+
+
 			],
 	}
 }

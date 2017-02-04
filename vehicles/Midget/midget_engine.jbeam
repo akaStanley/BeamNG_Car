@@ -1,0 +1,102 @@
+{
+"midget_engine": {
+	"information":{
+		"authors":"DrowsSam",
+		"name":"Example Car Engine",
+	}
+    "slotType" : "midget_engine",
+	"scalebeamSpring":1,
+	"scalebeamDamp":1,
+	"scalebeamDeform":1,
+	"scalebeamStrength":1,
+	"slots": [
+		["type", "default", "description"]
+		["beamng_transmission","beamng_transmission", "Example Car Transmission"],
+	],
+
+	"enginetorque":[
+		["rpm", "torque"]
+		[0, 0],
+        [500, 90],
+        [1000, 121],
+        [2000, 155],
+        [3000, 179],
+        [4000, 191],
+        [4500, 195],
+        [5000, 198],
+        [6000, 192],
+
+	],
+	"engine":{
+		"idleRPM":1000,
+		"shiftDownRPM":3200,
+		"shiftUpRPM":5000,
+		"maxRPM":6000,
+		"inertia":0.16,
+		"friction":24,
+		"brakingCoefRPS":0.15
+		"burnEfficiency":0.45
+		"throttleSensitivity":1.1
+		"torqueReactionNodes:":["eng1l","eng2l","eng4r"]
+		},
+	"nodes": [
+		 ["id", "posX", "posY", "posZ"],
+
+		 {"group":""},
+		 
+	],
+	
+	"beams": [
+		  ["id1:", "id2:"],
+		  {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+		  		  
+	      {"beamSpring":4001000,"beamDamp":150},
+		  {"beamDeform":1500000,"beamStrength":"FLT_MAX"},
+
+		  {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+	],
+	"triangles": [
+			["id1:","id2:","id3:"],
+	],
+}
+"beamng_transmission": {
+	"information":{
+		"authors":"DrowsSam",
+		"name":"Example Car Transmission",
+	}
+    "slotType" : "beamng_transmission",
+	"scalebeamSpring":1,
+	"scalebeamDamp":1,
+	"scalebeamDeform":1,
+	"scalebeamStrength":1,
+	"flexbodies": [
+		 ["mesh", "[group]:", "nonFlexMaterials"],
+
+
+	],
+	"engine":{
+		"transmissionType":"manual",
+		"gears":[-3.25, 0, 3.15, 2.1, 1.36, 1.0, 0.7]
+		"clutchDuration":0.35
+		"clutchTorque":1320
+		"viscousCoupling":12
+		"lockingTorqueLimit":1500
+		},
+	"nodes": [
+		 ["id", "posX", "posY", "posZ"],	 
+	],
+	
+	"beams": [
+		  ["id1:", "id2:"],
+		  {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+		  		  
+	      {"beamSpring":4001000,"beamDamp":150},
+		  {"beamDeform":1500000,"beamStrength":"FLT_MAX"},
+
+		  {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+	],
+	"triangles": [
+			["id1:","id2:","id3:"],
+	],
+}
+}
