@@ -7,7 +7,7 @@
 		"slotType":"main",
 		"slots": [
 		["type", "default", "description"]
-		["midget_engine","midget_engine","Example Car Engine"],		
+		//["midget_engine","midget_engine","Example Car Engine"],		
 	],
 		"refNodes":[
 		["ref:", "back:", "left:", "up:"]

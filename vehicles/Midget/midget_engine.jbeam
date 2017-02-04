@@ -12,6 +12,7 @@
 	"slots": [
 		["type", "default", "description"]
 		["beamng_transmission","beamng_transmission", "Example Car Transmission"],
+		["transfer_case", "transfer_case", "Transfer Caseasdfasd"],
 	],
 
 	"enginetorque":[
@@ -59,12 +60,19 @@
 			["id1:","id2:","id3:"],
 	],
 }
+
+
 "beamng_transmission": {
 	"information":{
 		"authors":"DrowsSam",
 		"name":"Example Car Transmission",
 	}
-    "slotType" : "beamng_transmission",
+    "slotType" : "beamng_transmission",,
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+		["midget_engine","midget_engine","Example Car Engine"],	
+        ["beamng_transmission", "transmission", "engine", 1],
+    ],
 	"scalebeamSpring":1,
 	"scalebeamDamp":1,
 	"scalebeamDeform":1,
@@ -82,21 +90,20 @@
 		"viscousCoupling":12
 		"lockingTorqueLimit":1500
 		},
-	"nodes": [
-		 ["id", "posX", "posY", "posZ"],	 
-	],
-	
-	"beams": [
-		  ["id1:", "id2:"],
-		  {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
-		  		  
-	      {"beamSpring":4001000,"beamDamp":150},
-		  {"beamDeform":1500000,"beamStrength":"FLT_MAX"},
-
-		  {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
-	],
-	"triangles": [
-			["id1:","id2:","id3:"],
-	],
 }
+"transfer_case": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"FWD Transfer Case",
+        "value":600,
+    },
+	
+    "slotType" : "transfer_case",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["shaft", "transfercase", "gearbox", 1, {"outputPortOverride":[2], "friction":2}],
+    ],
+},
+
+
 }
