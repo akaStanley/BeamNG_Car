@@ -33,6 +33,7 @@
 		]
 		//usuallt hydros go right afte the beams section
 	
+	
 	"hubWheels": [
         ["name","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
         {"enableTireSideSupportBeams":true},
@@ -99,10 +100,59 @@
     ],
 	
 	
+		"enginetorque":[
+        ["rpm", "torque"] //Torque curve
+        //[0, 0],
+        //[500, 60],
+        //[1000, 73],
+        //[2000, 93],
+        //[3000, 115],
+        //[4000, 132],
+        //[4500, 134],
+        //[5000, 135],
+        //[6000, 134],
+        //[7000, 114],
+        //[7500, 90],
+		[0, 0],
+		[500, 1000],
+		[1000, 1000],
+		[2000, 1000],
+		[3000, 1000],
+		[4000, 1000],
+		[5000, 1000],
+		[6000, 1000],
+    ],
+    "engine":{
+        "idleRPM":1000, //Idling RPM
+        "shiftDownRPM":3400, //Down shift, for automatic
+        "shiftUpRPM":6400, //Up shift, for automatic
+        "maxRPM":7500, //Max RPM for the engine, basically a redline. 
+        "inertia":0.08,
+        "friction":16
+        "brakingCoefRPS":0.15
+        "burnEfficiency":0.5
+        "throttleSensitivity":1.2
+         
+        //transmission section
+        "transmissionType":"manual", //Automatic or manual, setting automatic will restrict the use of manual mode while playing.
+        "lowShiftDownRPM":1400,
+        "lowShiftUpRPM":3600,
+        "highShiftDownRPM":3300,
+        "highShiftUpRPM":6000,
+        // -1, 0 (neutral), 1, etc
+        "gears":[-3.25, 0, 3.15, 2.1, 1.36, 1.0, 0.7]
+        "clutchDuration":0.25
+        "viscousCoupling":3.5
+        "lockingTorqueLimit":150
+        "enableLocking":true
+        },
+		
+		
+	
 //--Nodes--
 		"nodes":[
 			["id", "posX", "posY", "posZ"],
-		{"nodeWeight":10},
+		{"nodeWeight":8},
 		{"frictionCoef":0.7},
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
