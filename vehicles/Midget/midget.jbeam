@@ -44,71 +44,21 @@
 		//usuallt hydros go right afte the beams section
 	
 	
-	"hubWheels": [
-        ["name","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-        {"enableTireSideSupportBeams":true},
-          
-        //general settings
-        {"radius":0.35}, //Radius of the tire nodes
-        {"hubRadius":0.25}, //Radius of the rim
-        {"wheelOffset":0}, //Offset from the original position(Left/right)
-        {"hubWidth":0.2}, //Width of the rim
-        {"tireWidth":0.2}, //Width of the tire
-        {"numRays":12}, //The amount of nodes to make the circle, more may result in smoother driving, but at the cost of performance, weight & stability
-          
-        //hub options
-        {"hubBeamSpring":1081000, "hubBeamDamp":16},
-        {"beamSpring":1081000, "beamDamp":16},
-        {"hubBeamDeform":36000, "hubBeamStrength":112000},
-        {"beamDeform":240000,"beamStrength":380000},
-        {"hubNodeWeight":0.60}, //Weight of the rim nodes, to get the total weight of the rim, calculate numRays X nodeWeight X 2
-        {"hubNodeMaterial":"|NM_METAL"},
-        {"hubFrictionCoef":0.7},
-       //tire options
-        {"wheelTreadBeamSpring":281000,"wheelTreadBeamDamp":90,"wheelTreadBeamDeform":25000,"wheelTreadBeamStrength":34000},
-        {"wheelPeripheryBeamSpring":281000,"wheelPeripheryBeamDamp":90,"wheelPeripheryBeamDeform":25000,"wheelPeripheryBeamStrength":34000},
-        {"springExpansion":1081000, "dampExpansion":18},
-        {"nodeWeight":0.60}, //Weight of the tire nodes, to get the total weight of the tire, calculate numRays X nodeWeight X 2
-        {"nodeMaterial":"|NM_RUBBER"},
-        {"frictionCoef":1.1}, //Tire friction for each node, increasing will add more grip to your vehicle
-          
-        //
-        {"pressurePSI":30}, //Tire pressure in PSI
-        {"maxPressurePSI":1500},
-        {"reinforcementPressurePSI":30},
-        {"pressureSpring":2601000},
-        {"reinforcementPressureSpring":144000},
-        {"pressureDamp":90},
-        {"reinforcementPressureDamp":90},
-          
-		  //["nr102","nl99"], //front axle (beam from Left to right)
-			//["nr31","nl28"],	//rear axle
-        //front
-        {"propulsed":1}
-        {"selfCollision":false}
-        {"collision":true}
-        {"axleBeams":["nr102","nl99",]} //connects the inner hub of each wheel
-        ["FL", "wheel_FL_g", "nr104", "nr102", 9999,  "nr103", 1],
-        {"axleBeams":["nl99","nr102"]}
-        ["FR", "wheel_FR_g", "nl98", "nl99", 9999,  "nl100", -1],
-        {"axleBeams":[]}
-        {"enableABS":false}
-        {"selfCollision":true}
-         //					  /	 B2				nr103
-		 //from front left (B0 - B1 	nr104  - nr102
-        //rear
-        {"propulsed":1}
-        {"selfCollision":false}
-        {"collision":true}
-        {"axleBeams":["nr31","nl28",]}
-        ["RR", "wheel_RL_g", "nl27", "nl28", 9999,  "nl29", -1],
-        {"axleBeams":["nl28","nr31"]}
-        ["RL", "wheel_RR_g", "nr33", "nr31", 9999,  "nr32", -1],
-        {"axleBeams":[]}
-        {"enableABS":false}
-        {"selfCollision":true}
-    ],	
-	
+	"pressureWheels": [
+		 ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+		 ["FR", "wheel_FR", "tire_FR", "nl98", "nl99", 9999,  "brakeCaliper1", 1,  {"radius":0.6, "hubRadius":0.4, "tireWidth":0.08, "hubWidth":0.08, "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 ["FL", "wheel_FL", "tire_Fl", "nr104", "nr102", 9999,  "brakeCaliper1", -1,  {"radius":0.6, "hubRadius":0.4, "tireWidth":0.08, "hubWidth":0.08,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 
+		 ["RR", "wheel_RR", "tire_RR", "nr31", "nr33", 9999,  "brakeCaliper1", 1,  {"radius":0.6, "hubRadius":0.4, "tireWidth":0.08, "hubWidth":0.08,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 ["RL", "wheel_RL", "tire_Rl", "nl28", "nl27", 9999,  "brakeCaliper1", -1,  {"radius":0.6, "hubRadius":0.4, "tireWidth":0.08, "hubWidth":0.08,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 
+	],
+								//["nr102","nl99"], //front axle (beam from Left to right)
+								//["nr31","nl28"],	//rear axle
+								         //					  /	 B2				nr103
+										 //from front left (B0 - B1 	nr104  - nr102
+
+
 //--Nodes--
 		"nodes":[
 			["id", "posX", "posY", "posZ"],
