@@ -18,16 +18,16 @@
         "torque":[
             ["rpm", "torque"]
             [0, 0],
-			[500, 110],
-			[1000, 129],
-			[2000, 140],
-			[3000, 179],
-			[3500, 198],
-			[4000, 204],
-			[4500, 205],
-			[5000, 206],
-			[5500, 203],
-			[6000, 194],
+            [500, 38],
+            [1000, 56],
+            [1500, 68],
+            [2000, 82],
+            [2500, 83],
+            [3000, 77],
+            [4000, 57],
+            [5000, 35],
+            [5500, 21],
+            [6000, 10],
         ],
         "torqueReactionNodes:":["n101","n109","n110"] 	//turns out these are required.
         "idleRPM":650,
@@ -37,8 +37,8 @@
         "dynamicFriction":0.018
         "burnEfficiency":0.3
         //"particulates":0.15
-        //"energyStorage": "mainTank",		//engines require fuel to simulate 
-        //"requiredEnergyType":"gasoline", 	//
+        //"energyStorage": "mainTank",
+        //"requiredEnergyType":"gasoline",
 
         //cooling and oil system
         "thermalsEnabled":true
@@ -84,7 +84,7 @@
 	
 
     "gearbox": {
-        "gearRatios":[-3.35, 0, 3.32, 1.90, 1.31, 1.00, 0.84]
+        "gearRatios":[-3.2, 0, 3.6, 1.85, 1.0]
         "friction": 1,
     },
     "clutch": {},

@@ -46,15 +46,11 @@
 	
 	"pressureWheels": [
 		 ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		 //["FR", "wheel_FR", "tire_FR", "nl98", "nl99", 9999,  "brakeCaliper1", 1,  {}],  //these are the default wheels 
-		 //["FL", "wheel_FL", "tire_Fl", "nr104", "nr102", 9999,  "brakeCaliper1", -1,  {}],
+		 ["FR", "wheel_FR", "tire_FR", "nl98", "nl99", 9999,  "brakeCaliper1", 1,  {"hasTire":true, "radius":0.55, "hubRadius":0.3, "tireWidth":0.2, "hubWidth":0.2, "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 ["FL", "wheel_FL", "tire_Fl", "nr104", "nr102", 9999,  "brakeCaliper1", -1,  {"hasTire":true,"radius":0.55, "hubRadius":0.3, "tireWidth":0.2, "hubWidth":0.2,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
 		 
-		 
-		 ["FR", "wheel_FR", "tire_FR", "nl98", "nl99", 9999,  "brakeCaliper1", 1,  {"hasTire":true, "radius":0.55, "hubRadius":0.3, "tireWidth":0.486, "hubWidth":0.486, "speedo":true}],
-		 ["FL", "wheel_FL", "tire_Fl", "nr104", "nr102", 9999,  "brakeCaliper1", -1,  {"hasTire":true,"radius":0.55, "hubRadius":0.3, "tireWidth":0.486, "hubWidth":0.486,  "speedo":true}],
-		 
-		 ["RR", "wheel_RR", "tire_RR", "nr31", "nr33", 9999,  "brakeCaliper1", 1,  {"hasTire":true,"radius":0.55, "hubRadius":0.3, "tireWidth":0.486, "hubWidth":0.486,  "speedo":true}],
-		 ["RL", "wheel_RL", "tire_Rl", "nl28", "nl27", 9999,  "brakeCaliper1", -1,  {"hasTire":true,"radius":0.55, "hubRadius":0.3, "tireWidth":0.486, "hubWidth":0.486,  "speedo":true}],
+		 ["RR", "wheel_RR", "tire_RR", "nr31", "nr33", 9999,  "brakeCaliper1", 1,  {"hasTire":true,"radius":0.55, "hubRadius":0.3, "tireWidth":0.2, "hubWidth":0.2,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 ["RL", "wheel_RL", "tire_Rl", "nl28", "nl27", 9999,  "brakeCaliper1", -1,  {"hasTire":true,"radius":0.55, "hubRadius":0.3, "tireWidth":0.2, "hubWidth":0.2,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
 		 
 	],
 								//["nr102","nl99"], //front axle (beam from Left to right)
@@ -66,7 +62,7 @@
 //--Nodes--
 		"nodes":[
 			["id", "posX", "posY", "posZ"],
-		{"nodeWeight":8},
+		{"nodeWeight":10},
 		{"frictionCoef":0.7},
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
@@ -98,13 +94,13 @@
 			["nr24",-0.525,-1.934,0.771],
 			["nr25",-0.999,-1.934,0.7],
 			["nr26",-1.032,-1.934,0.437],
-			["nl27",1.011,-1.635,0.0],
+			["nl27",0.856,-1.635,0.0],
 			["nl28",0.525,-1.635,0.0],
 			["nl29",0.525,-1.635,0.38],
 			["n30",0.0,-1.635,0.0],
 			["nr31",-0.525,-1.635,0.0],
 			["nr32",-0.525,-1.635,0.38],
-			["nr33",-1.011,-1.635,0.0],
+			["nr33",-0.856,-1.635,0.0],
 			["nl34",0.999,-1.509,0.712],
 			["nl35",0.525,-1.509,0.831],
 			["n36",0.0,-1.509,0.822],
@@ -169,13 +165,13 @@
 			["n95",0.0,1.446,0.697],
 			["nr96",-0.525,1.446,0.622],
 			["nr97",-0.968,1.446,0.8],
-			["nl98",1.011,1.566,0.0],
+			["nl98",0.856,1.566,0.0],
 			["nl99",0.525,1.566,0.0],
 			["nl100",0.525,1.566,0.38],
 			["n101",0.0,1.566,0.0],
 			["nr102",-0.525,1.566,0.0],
 			["nr103",-0.525,1.566,0.38],
-			["nr104",-1.011,1.566,0.0],
+			["nr104",-0.856,1.566,0.0],
 			["nl105",0.999,1.857,0.419],
 			["nl106",0.969,1.857,0.801],
 			["nl107",0.525,1.857,0.0],
@@ -247,7 +243,7 @@
 			["nr50","nr44"],
 			["nl39","nl34"],
 			["nl1","nl5"],
-			["nl74","nl100"],
+			
 			["nr70","nr60"],
 			["nr57","nr44"],
 			["nr102","nr88"],
@@ -267,7 +263,6 @@
 			["nl99","n101"],
 			["nl108","nl106"],
 			["n129","n118"],
-			["nl53","nl29"],
 			["nr37","n36"],
 			["nl84","nl74"],
 			["nl10","nr19"],
@@ -305,7 +300,6 @@
 			["nl126","nr133"],
 			["nr113","nr114"],
 			["nr80","nr82"],
-			["nr32","nr33"],
 			["nl84","nr90"],
 			["nl0","nr9"],
 			["nl93","nr97"],
@@ -351,7 +345,6 @@
 			["nl106","nr133"],
 			["nr6","nr18"],
 			["nl53","nr32"],
-			["nl1","nl29"],
 			["nl29","nr32"],
 			["nr131","nr132"],
 			["nl34","nl21"],
@@ -439,7 +432,6 @@
 			["nl8","nr82"],
 			["n76","n75"],
 			["nl83","nl125"],
-			["nr57","nr32"],
 			["nl49","nl12"],
 			["n42","nr44"],
 			["nl81","nl83"],
@@ -462,7 +454,6 @@
 			["nr11","nr17"],
 			["nl107","n109"],
 			["n66","n76"],
-			["nr3","nr32"],
 			["nl28","nl13"],
 			["nl125","nl126"],
 			["n129","nl127"],
@@ -491,7 +482,7 @@
 			["nl71","nl61"],
 			["nr46","nr38"],
 			["n75","nl74"],
-			["nr77","nr103"],
+
 			["nl10","nl8"],
 			["nr48","nr50"],
 			["nr78","n76"],
@@ -528,7 +519,6 @@
 			["nl81","nl126"],
 			["nl91","nl99"],
 			["nl35","nl41"],
-			["nl29","nl27"],
 			["nl0","nr90"],
 			["nr70","nr59"],
 			["nl91","nl105"],
@@ -542,7 +532,7 @@
 			["n65","nl63"],
 			["nr132","n130"],
 			["n43","nr45"],
-			["nr131","nr103"],
+
 			["nr59","nr46"],
 			["nr59","nr69"],
 			["n43","n56"],
@@ -1356,13 +1346,40 @@
 			["nl20","nl40"],
 			["nl47","nl28"],
 			
+			//hypotenuse of triangle
+			["nr103","nr104"],
+			["nl99","nl100"],
+			["nl29","nl27"],
+			["nr32","nr33"],
+			
+
+												
+												
+												
+
+
 			//suspension beams kinda
 			{"beamSpring":20000, "beamDamp":200},
 			{"beamDeform":"FLT_MAX", "beamStrength":"FLT_MAX"},
+			//vertical
 			["nr31","nr32"],
 			["nl28","nl29"],
 			["nl99","nl100"],
 			["nr102","nr103"],
+			
+			//front spreading suspension beams
+			["nr131","nr103"],
+			["nr77","nr103"],
+			
+			["nl127","nl100"],
+			["nl74","nl100"],
+
+			// back spreading suspension beams
+			["nr57","nr32"],
+			["nr3","nr32"],
+			
+			["nl1","nl29"],
+			["nl53","nl29"],
 
 
 			],
