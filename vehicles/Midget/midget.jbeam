@@ -46,11 +46,11 @@
 	
 	"pressureWheels": [
 		 ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		 ["FR", "wheel_FR", "tire_FR", "nl98", "nl99", 9999,  "brakeCaliper1", 1,  {"hasTire":true, "radius":0.55, "hubRadius":0.3, "tireWidth":0.2, "hubWidth":0.2, "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
-		 ["FL", "wheel_FL", "tire_Fl", "nr104", "nr102", 9999,  "brakeCaliper1", -1,  {"hasTire":true,"radius":0.55, "hubRadius":0.3, "tireWidth":0.2, "hubWidth":0.2,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 ["FR", "wheel_FR", "tire_FR", "nl98", "nl99", 9999,  "brakeCaliper1", 1,  {"hasTire":true, "radius":0.55, "tireWidth":0.2, "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 ["FL", "wheel_FL", "tire_Fl", "nr104", "nr102", 9999,  "brakeCaliper1", -1,  {"hasTire":true,"radius":0.55, "tireWidth":0.2, "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
 		 
-		 ["RR", "wheel_RR", "tire_RR", "nr31", "nr33", 9999,  "brakeCaliper1", 1,  {"hasTire":true,"radius":0.55, "hubRadius":0.3, "tireWidth":0.2, "hubWidth":0.2,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
-		 ["RL", "wheel_RL", "tire_Rl", "nl28", "nl27", 9999,  "brakeCaliper1", -1,  {"hasTire":true,"radius":0.55, "hubRadius":0.3, "tireWidth":0.2, "hubWidth":0.2,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 ["RR", "wheel_RR", "tire_RR", "nr31", "nr33", 9999,  "brakeCaliper1", 1,  {"hasTire":true,"radius":0.55, "tireWidth":0.2, "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 ["RL", "wheel_RL", "tire_Rl", "nl28", "nl27", 9999,  "brakeCaliper1", -1,  {"hasTire":true,"radius":0.55, "tireWidth":0.2,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
 		 
 	],
 								//["nr102","nl99"], //front axle (beam from Left to right)
@@ -58,15 +58,20 @@
 								         //					  /	 B2				nr103
 										 //from front left (B0 - B1 	nr104  - nr102
 
-
+		"flexbodies": [
+			["mesh", "[group]:", "nonFlexMaterials"],
+			["MG_Body", ["MG_Body_group"]],
+		 ], 
+										 
 //--Nodes--
 		"nodes":[
 			["id", "posX", "posY", "posZ"],
-		{"nodeWeight":10},
+		{"nodeWeight":25},
 		{"frictionCoef":0.7},
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":true},
+		{"group":"MG_Body_group"},
 			["nl0",0.999,-2.865,0.0],
 			["nl1",0.525,-2.865,0.0],
 			["n2",0.0,-2.865,0.0],
@@ -203,6 +208,7 @@
 			["nr133",-0.97,2.286,0.663],
 			["nr134",-0.999,2.286,0.0],
 			],
+			{"group":"”}, //closing group for the mg body flexbody
 //--Beams--
 		"beams":[
 			["id1:", "id2:"],
@@ -1352,14 +1358,13 @@
 			["nl29","nl27"],
 			["nr32","nr33"],
 			
-
 												
 												
 												
 
 
 			//suspension beams kinda
-			{"beamSpring":20000, "beamDamp":200},
+			{"beamSpring":4300000, "beamDamp":200},
 			{"beamDeform":"FLT_MAX", "beamStrength":"FLT_MAX"},
 			//vertical
 			["nr31","nr32"],
