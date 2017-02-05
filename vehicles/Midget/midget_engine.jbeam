@@ -2,7 +2,7 @@
 "midget_engine": {
     "information":{
         "authors":"BeamNG",
-        "name":"658cc I3 Diesel Engine",
+        "name":"658cc I3 Gas Engine",
         "value":350,
     }
     "slotType" : "midget_engine",
@@ -29,16 +29,16 @@
             [5500, 21],
             [6000, 10],
         ],
-        
+        "torqueReactionNodes:":["n101","n109","n110"] 	//turns out these are required.
         "idleRPM":650,
         "maxRPM":4500,
         "inertia":0.11,
         "friction":9
         "dynamicFriction":0.018
         "burnEfficiency":0.3
-        "particulates":0.15
-        "energyStorage": "mainTank",
-        "requiredEnergyType":"diesel",
+        //"particulates":0.15
+        //"energyStorage": "mainTank",
+        //"requiredEnergyType":"gasoline",
 
         //cooling and oil system
         "thermalsEnabled":true
