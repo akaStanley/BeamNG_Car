@@ -1,5 +1,5 @@
 {
-	"beamsBody":{
+	"midget":{
 		"information":{
 			"name":"Midget",
 			"authors":"Spencer"
@@ -7,8 +7,15 @@
 		"slotType":"main",
 		"slots": [
 		["type", "default", "description"]
-		//["midget_engine","midget_engine","Example Car Engine"],		
+		["midget_exhaust","midget_exhaust", "Exhaust"],
+        ["midget_transmission","midget_transmission_3M", "Transmission"],		
 	],
+	
+	"controller": [
+        ["fileName"],
+        ["vehicleController", {}],
+    ],
+	
 		"refNodes":[
 		["ref:", "back:", "left:", "up:"]
 		["n65", "n55", "nl63", "n66"]

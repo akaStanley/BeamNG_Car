@@ -1,109 +1,98 @@
 {
 "midget_engine": {
-	"information":{
-		"authors":"DrowsSam",
-		"name":"Example Car Engine",
-	}
-    "slotType" : "midget_engine",
-	"scalebeamSpring":1,
-	"scalebeamDamp":1,
-	"scalebeamDeform":1,
-	"scalebeamStrength":1,
-	"slots": [
-		["type", "default", "description"]
-		["beamng_transmission","beamng_transmission", "Example Car Transmission"],
-		["transfer_case", "transfer_case", "Transfer Caseasdfasd"],
-	],
-
-	"enginetorque":[
-		["rpm", "torque"]
-		[0, 0],
-        [500, 90],
-        [1000, 121],
-        [2000, 155],
-        [3000, 179],
-        [4000, 191],
-        [4500, 195],
-        [5000, 198],
-        [6000, 192],
-
-	],
-	"engine":{
-		"idleRPM":1000,
-		"shiftDownRPM":3200,
-		"shiftUpRPM":5000,
-		"maxRPM":6000,
-		"inertia":0.16,
-		"friction":24,
-		"brakingCoefRPS":0.15
-		"burnEfficiency":0.45
-		"throttleSensitivity":1.1
-		"torqueReactionNodes:":["eng1l","eng2l","eng4r"]
-		},
-	"nodes": [
-		 ["id", "posX", "posY", "posZ"],
-
-		 {"group":""},
-		 
-	],
-	
-	"beams": [
-		  ["id1:", "id2:"],
-		  {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
-		  		  
-	      {"beamSpring":4001000,"beamDamp":150},
-		  {"beamDeform":1500000,"beamStrength":"FLT_MAX"},
-
-		  {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
-	],
-	"triangles": [
-			["id1:","id2:","id3:"],
-	],
-}
-
-
-"beamng_transmission": {
-	"information":{
-		"authors":"DrowsSam",
-		"name":"Example Car Transmission",
-	}
-    "slotType" : "beamng_transmission",,
-    "powertrain" : [
-        ["type", "name", "inputName", "inputIndex"],
-		["midget_engine","midget_engine","Example Car Engine"],	
-        ["beamng_transmission", "transmission", "engine", 1],
-    ],
-	"scalebeamSpring":1,
-	"scalebeamDamp":1,
-	"scalebeamDeform":1,
-	"scalebeamStrength":1,
-	"flexbodies": [
-		 ["mesh", "[group]:", "nonFlexMaterials"],
-
-
-	],
-	"engine":{
-		"transmissionType":"manual",
-		"gears":[-3.25, 0, 3.15, 2.1, 1.36, 1.0, 0.7]
-		"clutchDuration":0.35
-		"clutchTorque":1320
-		"viscousCoupling":12
-		"lockingTorqueLimit":1500
-		},
-}
-"transfer_case": {
     "information":{
         "authors":"BeamNG",
-        "name":"FWD Transfer Case",
-        "value":600,
-    },
-	
-    "slotType" : "transfer_case",
-    "powertrain" : [
-        ["type", "name", "inputName", "inputIndex"],
-        ["shaft", "transfercase", "gearbox", 1, {"outputPortOverride":[2], "friction":2}],
+        "name":"658cc I3 Diesel Engine",
+        "value":350,
+    }
+    "slotType" : "midget_engine",
+    "slots": [
+        ["type", "default", "description"]
+        ["midget_exhaust","midget_exhaust", "Exhaust"],
+        ["midget_transmission","midget_transmission_3M", "Transmission"],
     ],
-},
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "mainEngine": {
+        "torque":[
+            ["rpm", "torque"]
+            [0, 0],
+            [500, 38],
+            [1000, 56],
+            [1500, 68],
+            [2000, 82],
+            [2500, 83],
+            [3000, 77],
+            [4000, 57],
+            [5000, 35],
+            [5500, 21],
+            [6000, 10],
+        ],
+        
+        "idleRPM":650,
+        "maxRPM":4500,
+        "inertia":0.11,
+        "friction":9
+        "dynamicFriction":0.018
+        "burnEfficiency":0.3
+        "particulates":0.15
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"diesel",
 
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"iron"
+        "oilVolume":2
 
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":160
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":1500000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":1200,
+        "clutchLaunchTargetRPM":1800,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,1600,2100,2300,2300]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":4300
+    },
+}
+"midget_transmission_3M": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"3-Speed Manual Transmission",
+    }
+    "slotType" : "midget_transmission",
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-3.2, 0, 3.6, 1.85, 1.0]
+        "friction": 1,
+    },
+    "clutch": {},
+    "vehicleController": {
+        "lowShiftDownRPM":[0,0,0,1600,2100,2300,2300],
+        "lowShiftUpRPM":3500,
+    },
+}
+"midget_exhaust": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Exhaust",
+    }
+    "slotType" : "midget_exhaust", 
+}
 }
