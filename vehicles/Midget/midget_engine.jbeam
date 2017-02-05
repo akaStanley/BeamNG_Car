@@ -14,6 +14,9 @@
     "powertrain": [
         ["type", "name", "inputName", "inputIndex"],
         ["combustionEngine", "mainEngine", "dummy", 0],
+		["differential",     "myRearDiff",        "driveshaft",      1           ]
+		["shaft",            "myAxleShaft1",      "myRearDiff",        1,          {"connectedWheel":"FL"}]
+		["shaft",            "myAxleShaft2",      "myRearDiff",        2,          {"connectedWheel":"FR"}]
     ],
     "mainEngine": {
         "torque":[
@@ -74,10 +77,14 @@
     }
     "slotType" : "midget_transmission",
     "powertrain": [
-        ["type", "name", "inputName", "inputIndex"],
-        ["frictionClutch", "clutch", "mainEngine", 1],
-        ["manualGearbox", "gearbox", "clutch", 1],
+        ["type", 			"name", 		"inputName", "inputIndex"],
+        ["frictionClutch", 	"clutch", 		"mainEngine", 1],
+        ["manualGearbox", 	"gearbox", 		"clutch", 1],
+		["shaft",			"driveshaft", 	"gearbox", 1]
+		
     ],
+	
+
     "gearbox": {
         "gearRatios":[-3.2, 0, 3.6, 1.85, 1.0]
         "friction": 1,

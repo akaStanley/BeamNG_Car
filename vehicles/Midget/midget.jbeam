@@ -8,7 +8,12 @@
 		"slots": [
 		["type", "default", "description"]
 		["midget_exhaust","midget_exhaust", "Exhaust"],
-        ["midget_transmission","midget_transmission_3M", "Transmission"],		
+        ["midget_transmission","midget_transmission_3M", "Transmission"],
+		["midget_engine","midget_engine", "Engine"],
+        ["midget_radiator","midget_radiator", "Radiator"],
+		["differential",     "myRearDiff",        "driveshaft",      1           ]
+		["shaft",            "myAxleShaft1",      "myRearDiff",        1,          {"connectedWheel":"FL"}]
+		["shaft",            "myAxleShaft2",      "myRearDiff",        2,          {"connectedWheel":"FR"}]
 	],
 	
 	"controller": [
@@ -108,12 +113,7 @@
         {"axleBeams":[]}
         {"enableABS":false}
         {"selfCollision":true}
-    ],
-	
-	
-
-		
-		
+    ],	
 	
 //--Nodes--
 		"nodes":[
