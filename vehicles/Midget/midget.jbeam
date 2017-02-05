@@ -46,11 +46,15 @@
 	
 	"pressureWheels": [
 		 ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		 ["FR", "wheel_FR", "tire_FR", "nl98", "nl99", 9999,  "brakeCaliper1", -1,  {"hasTire":true, "radius":0.55, "hubRadius":0.3, "tireWidth":0.2, "hubWidth":0.2, "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
-		 ["FL", "wheel_FL", "tire_Fl", "nr104", "nr102", 9999,  "brakeCaliper1", 1,  {"hasTire":true,"radius":0.55, "hubRadius":0.3, "tireWidth":0.2, "hubWidth":0.2,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 //["FR", "wheel_FR", "tire_FR", "nl98", "nl99", 9999,  "brakeCaliper1", 1,  {}],  //these are the default wheels 
+		 //["FL", "wheel_FL", "tire_Fl", "nr104", "nr102", 9999,  "brakeCaliper1", -1,  {}],
 		 
-		 ["RR", "wheel_RR", "tire_RR", "nr31", "nr33", 9999,  "brakeCaliper1", -1,  {"hasTire":true,"radius":0.55, "hubRadius":0.3, "tireWidth":0.2, "hubWidth":0.2,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
-		 ["RL", "wheel_RL", "tire_Rl", "nl28", "nl27", 9999,  "brakeCaliper1", 1,  {"hasTire":true,"radius":0.55, "hubRadius":0.3, "tireWidth":0.2, "hubWidth":0.2,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 
+		 ["FR", "wheel_FR", "tire_FR", "nl98", "nl99", 9999,  "brakeCaliper1", 1,  {"hasTire":true, "radius":0.55, "hubRadius":0.3, "tireWidth":0.486, "hubWidth":0.486, "speedo":true}],
+		 ["FL", "wheel_FL", "tire_Fl", "nr104", "nr102", 9999,  "brakeCaliper1", -1,  {"hasTire":true,"radius":0.55, "hubRadius":0.3, "tireWidth":0.486, "hubWidth":0.486,  "speedo":true}],
+		 
+		 ["RR", "wheel_RR", "tire_RR", "nr31", "nr33", 9999,  "brakeCaliper1", 1,  {"hasTire":true,"radius":0.55, "hubRadius":0.3, "tireWidth":0.486, "hubWidth":0.486,  "speedo":true}],
+		 ["RL", "wheel_RL", "tire_Rl", "nl28", "nl27", 9999,  "brakeCaliper1", -1,  {"hasTire":true,"radius":0.55, "hubRadius":0.3, "tireWidth":0.486, "hubWidth":0.486,  "speedo":true}],
 		 
 	],
 								//["nr102","nl99"], //front axle (beam from Left to right)
@@ -94,13 +98,13 @@
 			["nr24",-0.525,-1.934,0.771],
 			["nr25",-0.999,-1.934,0.7],
 			["nr26",-1.032,-1.934,0.437],
-			["nl27",0.856,-1.635,0.0],
+			["nl27",1.011,-1.635,0.0],
 			["nl28",0.525,-1.635,0.0],
 			["nl29",0.525,-1.635,0.38],
 			["n30",0.0,-1.635,0.0],
 			["nr31",-0.525,-1.635,0.0],
 			["nr32",-0.525,-1.635,0.38],
-			["nr33",-0.856,-1.635,0.0],
+			["nr33",-1.011,-1.635,0.0],
 			["nl34",0.999,-1.509,0.712],
 			["nl35",0.525,-1.509,0.831],
 			["n36",0.0,-1.509,0.822],
@@ -165,13 +169,13 @@
 			["n95",0.0,1.446,0.697],
 			["nr96",-0.525,1.446,0.622],
 			["nr97",-0.968,1.446,0.8],
-			["nl98",0.856,1.566,0.0],
+			["nl98",1.011,1.566,0.0],
 			["nl99",0.525,1.566,0.0],
 			["nl100",0.525,1.566,0.38],
 			["n101",0.0,1.566,0.0],
 			["nr102",-0.525,1.566,0.0],
 			["nr103",-0.525,1.566,0.38],
-			["nr104",-0.856,1.566,0.0],
+			["nr104",-1.011,1.566,0.0],
 			["nl105",0.999,1.857,0.419],
 			["nl106",0.969,1.857,0.801],
 			["nl107",0.525,1.857,0.0],
