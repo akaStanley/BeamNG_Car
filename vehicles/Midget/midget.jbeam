@@ -46,11 +46,11 @@
 	
 	"pressureWheels": [
 		 ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		 ["FR", "wheel_FR", "tire_FR", "nl98", "nl99", 9999,  "brakeCaliper1", 1,  {"radius":0.6, "hubRadius":0.4, "tireWidth":0.08, "hubWidth":0.08, "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
-		 ["FL", "wheel_FL", "tire_Fl", "nr104", "nr102", 9999,  "brakeCaliper1", -1,  {"radius":0.6, "hubRadius":0.4, "tireWidth":0.08, "hubWidth":0.08,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 ["FR", "wheel_FR", "tire_FR", "nl98", "nl99", 9999,  "brakeCaliper1", 1,  {"radius":0.55, "hubRadius":0.4, "tireWidth":0.2, "hubWidth":0.2, "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 ["FL", "wheel_FL", "tire_Fl", "nr104", "nr102", 9999,  "brakeCaliper1", -1,  {"radius":0.55, "hubRadius":0.4, "tireWidth":0.2, "hubWidth":0.2,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
 		 
-		 ["RR", "wheel_RR", "tire_RR", "nr31", "nr33", 9999,  "brakeCaliper1", 1,  {"radius":0.6, "hubRadius":0.4, "tireWidth":0.08, "hubWidth":0.08,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
-		 ["RL", "wheel_RL", "tire_Rl", "nl28", "nl27", 9999,  "brakeCaliper1", -1,  {"radius":0.6, "hubRadius":0.4, "tireWidth":0.08, "hubWidth":0.08,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 ["RR", "wheel_RR", "tire_RR", "nr31", "nr33", 9999,  "brakeCaliper1", 1,  {"radius":0.55, "hubRadius":0.4, "tireWidth":0.2, "hubWidth":0.2,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 ["RL", "wheel_RL", "tire_Rl", "nl28", "nl27", 9999,  "brakeCaliper1", -1,  {"radius":0.55, "hubRadius":0.4, "tireWidth":0.2, "hubWidth":0.2,  "speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
 		 
 	],
 								//["nr102","nl99"], //front axle (beam from Left to right)

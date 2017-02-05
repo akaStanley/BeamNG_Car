@@ -8,7 +8,6 @@
     "slotType" : "midget_engine",
     "slots": [
         ["type", "default", "description"]
-        ["midget_exhaust","midget_exhaust", "Exhaust"],
         ["midget_transmission","midget_transmission_3M", "Transmission"],
     ],
     "powertrain": [
@@ -93,12 +92,5 @@
         "lowShiftDownRPM":[0,0,0,1600,2100,2300,2300],
         "lowShiftUpRPM":3500,
     },
-}
-"midget_exhaust": {
-    "information":{
-        "authors":"BeamNG",
-        "name":"Exhaust",
-    }
-    "slotType" : "midget_exhaust", 
 }
 }
