@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.78.0 commit date:2016-10-24, commit time:12:20, hash:e8299c8</authoring_tool>
     </contributor>
-    <created>2017-02-05T17:10:27</created>
-    <modified>2017-02-05T17:10:27</modified>
+    <created>2017-02-05T17:40:24</created>
+    <modified>2017-02-05T17:40:24</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -14,6 +14,16 @@
   <library_effects>
     <effect id="material1-effect">
       <profile_COMMON>
+        <newparam sid="Untitled_001-surface">
+          <surface type="2D">
+            <init_from>Untitled_001</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Untitled_001-sampler">
+          <sampler2D>
+            <source>Untitled_001-surface</source>
+          </sampler2D>
+        </newparam>
         <technique sid="common">
           <phong>
             <emission>
@@ -23,7 +33,7 @@
               <color sid="ambient">0 0 0 1</color>
             </ambient>
             <diffuse>
-              <color sid="diffuse">0.64 0.64 0.64 1</color>
+              <texture texture="Untitled_001-sampler" texcoord="UVMap"/>
             </diffuse>
             <specular>
               <color sid="specular">0.5 0.5 0.5 1</color>
@@ -89,6 +99,7 @@
       </mesh>
     </geometry>
   </library_geometries>
+  <library_controllers/>
   <library_visual_scenes>
     <visual_scene id="Scene" name="Scene">
       <node id="body" name="body" type="NODE">
@@ -96,7 +107,9 @@
         <instance_geometry url="#Plane_003-mesh" name="body">
           <bind_material>
             <technique_common>
-              <instance_material symbol="material1-material" target="#material1-material"/>
+              <instance_material symbol="material1-material" target="#material1-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
             </technique_common>
           </bind_material>
         </instance_geometry>

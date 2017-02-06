@@ -1,17 +1,23 @@
-singleton Material(material1)
+singleton Material(midget_material1)
 {
-   mapTo = "body";	//the name of the mesh in blender not the DAE filename
-   diffuseMap[0] = "vehicles/Midget/AO_bake.dds";
+   mapTo = "material1";	//the name of the material in blender
+   diffuseMap[0] = "AO_bake.dds";
    specularPower[0] = "15";
-   useAnisotropic[0] = "1";  
-   
-   diffuseColor[0] = "1 1 1 1";
-   
-   castShadows = "0";
-   translucent = "1";
-   alphaTest = "1";
+   useAnisotropic[0] = "1";
+   castShadows = "1";
+   translucent = "0";
+   alphaTest = "0";
    alphaRef = "0";
-   dynamicCubemap = true; //cubemap = "BNG_Sky_02_cubemap";
+   //dynamicCubemap = true; //cubemap = "BNG_Sky_02_cubemap";
    materialTag0 = "beamng"; materialTag1 = "vehicle";
 	
+};
+
+singleton Material(midget_dull_metal)
+{
+   mapTo = "dull_metal";	//the name of the material in blender
+   diffuseColor[0] = "0.470588 0.470588 0.470588 1";
+   specular[0] = "Black";
+   specularPower[0] = "128";
+   translucentBlendOp = "none";
 };
