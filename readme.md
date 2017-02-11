@@ -7,6 +7,9 @@ Car in BeamNG 1/29/16
 folder path goes like this:  
 car.zip>vehicles>car>allthestuff
 
+Axels/steering:
+http://docs.rigsofrods.org/vehicle-creation/wheels-axles-steering/
+
 https://wiki.beamng.com/Vehicle_Creation_Megapage
 
 Gear ratios:
