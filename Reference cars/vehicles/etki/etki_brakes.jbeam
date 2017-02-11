@@ -1,0 +1,233 @@
+{
+"etki_brake_F": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Front Brakes",
+        "value":300,
+    }
+    "slotType" : "etki_brake_F",
+    "slots": [
+        ["type", "default", "description"]
+        ["brakepad_F","brakepad_F", "Front Brake Pads"{"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["etki_brakedisc_FR", ["wheel_FR","wheelhub_FR"]],
+        ["etki_brakedisc_FL", ["wheel_FL","wheelhub_FL"]],
+        ["etki_caliper_F", ["etki_hub_F"]],
+    ],
+
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"ABSthreshold":1.8}
+        {"brakeTorque":1500},
+        {"brakeInputSplit":1},
+        {"brakeSplitCoef":1},
+        {"parkingTorque":0},
+        {"brakeSpring":50},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.25},
+        {"brakeMass":6.5},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":1.0},
+    ],
+},
+"etki_brake_R": {
+    "information":{
+        "authors":"gabester",
+        "name":"Rear Brakes",
+        "value":210,
+    }
+    "slotType" : "etki_brake_R",
+    "slots": [
+        ["type", "default", "description"]
+        ["brakepad_R","brakepad_R", "Rear Brake Pads"{"coreSlot":true}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etki_brake_R", ["etki_hub_R"]],
+         //brake discs
+         ["etki_brakedisc_RR", ["wheel_RR","wheelhub_RR"], []],
+         ["etki_brakedisc_RL", ["wheel_RL","wheelhub_RL"], []],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"ABSthreshold":1.8}
+        {"brakeTorque":900},
+        {"brakeInputSplit":0.50},
+        {"brakeSplitCoef":0.25},
+        {"parkingTorque":1500},
+        {"brakeSpring":50},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.24},
+        {"brakeMass":4.0},
+        {"brakeType":"disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":0.8},
+    ],
+}
+"etki_brake_F_sport": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Sport Front Brakes",
+        "value":450,
+    }
+    "slotType" : "etki_brake_F",
+    "slots": [
+        ["type", "default", "description"]
+        ["brakepad_F","brakepad_F_sport", "Front Brake Pads"{"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["etki_brakedisc_FR", ["wheel_FR","wheelhub_FR"]],
+        ["etki_brakedisc_FL", ["wheel_FL","wheelhub_FL"]],
+        ["etki_caliper_F", ["etki_hub_F"]],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"ABSthreshold":1.8}
+        {"brakeTorque":1800},
+        {"brakeInputSplit":1},
+        {"brakeSplitCoef":1},
+        {"parkingTorque":0},
+        {"brakeSpring":50},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.27},
+        {"brakeMass":7.0},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":1.0},
+    ],
+},
+"etki_brake_R_sport": {
+    "information":{
+        "authors":"gabester",
+        "name":"Sport Rear Brakes",
+        "value":280,
+    }
+    "slotType" : "etki_brake_R",
+    "slots": [
+        ["type", "default", "description"]
+        ["brakepad_R","brakepad_R_sport", "Rear Brake Pads"{"coreSlot":true}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etki_brake_R", ["etki_hub_R"]],
+         //brake discs
+         ["etki_brakedisc_RR", ["wheel_RR","wheelhub_RR"], []],
+         ["etki_brakedisc_RL", ["wheel_RL","wheelhub_RL"], []],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"ABSthreshold":1.8}
+        {"brakeTorque":1000},
+        {"brakeInputSplit":0.50},
+        {"brakeSplitCoef":0.25},
+        {"parkingTorque":1500},
+        {"brakeSpring":50},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.25},
+        {"brakeMass":4.5},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":0.8},
+    ],
+}
+"etki_brake_F_race": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Race Front Brakes",
+        "value":700,
+    }
+    "slotType" : "etki_brake_F",
+    "slots": [
+        ["type", "default", "description"]
+        ["brakepad_F","brakepad_F_race", "Front Brake Pads"{"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["etki_brakedisc_FR_race", ["wheel_FR","wheelhub_FR"]],
+        ["etki_brakedisc_FL_race", ["wheel_FL","wheelhub_FL"]],
+        ["etki_caliper_F_race", ["etki_hub_F"]],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$braketorque_F", "range", "", "Brakes", 2100, 0, 2800, "Front Brake Torque", "Strength of the front brakes"{"minDis":0}]
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"ABSthreshold":1.8}
+        {"brakeTorque":"$braketorque_F"},
+        {"brakeInputSplit":1},
+        {"brakeSplitCoef":1},
+        {"parkingTorque":0},
+        {"brakeSpring":50},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.32},
+        {"brakeMass":7.75},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":1.2},
+    ],
+},
+"etki_brake_R_race": {
+    "information":{
+        "authors":"gabester",
+        "name":"Race Rear Brakes",
+        "value":450,
+    }
+    "slotType" : "etki_brake_R",
+    "slots": [
+        ["type", "default", "description"]
+        ["brakepad_R","brakepad_R_race", "Rear Brake Pads"{"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["etki_brake_R_race", ["etki_hub_R"]],
+        //brake discs
+        ["etki_brakedisc_RR_race", ["wheel_RR","wheelhub_RR"], []],
+        ["etki_brakedisc_RL_race", ["wheel_RL","wheelhub_RL"], []],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$braketorque_R", "range", "", "Brakes", 1150, 0, 2500, "Rear Brake Torque", "Strength of the rear brakes"{"minDis":0}]
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"ABSthreshold":1.8}
+        {"brakeTorque":"$braketorque_R"},
+        {"brakeInputSplit":0.5},
+        {"brakeSplitCoef":0.25},
+        {"parkingTorque":2000},
+        {"brakeSpring":50},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.28},
+        {"brakeMass":5.25},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":0.9},
+    ],
+}
+}

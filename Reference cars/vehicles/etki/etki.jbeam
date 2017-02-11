@@ -1,0 +1,202 @@
+{
+"etki": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"ETK 2400i",
+    },
+    "slotType" : "main",
+    "slots": [
+        ["type", "default", "description"]
+        ["paint_design", "", "Paint Design"],
+        ["licenseplate_design_2_1","","License Plate Design"],
+        ["etki_body", "etki_body", "Body"{"coreSlot":true}],
+        ["etki_mod", "", "Additional Modification"],
+    ],
+
+    "scaledragCoef":1.35,
+    
+    "controller": [
+        ["fileName"],
+        ["vehicleController", {}],
+    ],
+
+    "glowMap":{
+            "etki_signal_L":{"simpleFunction":{"signal_L":0.49}, "off":"etki_lights", "on":"etki_lights_on", "on_intense":"etki_lights_on_intense"},
+            "etki_signal_R":{"simpleFunction":{"signal_R":0.49}, "off":"etki_lights", "on":"etki_lights_on", "on_intense":"etki_lights_on_intense"},
+            "etki_taillight":{"simpleFunction":{"lowhighbeam":0.49}, "off":"etki_lights", "on":"etki_lights_on", "on_intense":"etki_lights_on_intense"},
+            "etki_brakelight":{"simpleFunction":{"brake":0.49}, "off":"etki_lights", "on":"etki_lights_on", "on_intense":"etki_lights_on_intense"},
+            "etki_chmsl":{"simpleFunction":{"brake":100}, "off":"etki_lights", "on":"etki_lights_on", "on_intense":"etki_lights_on_intense"},
+            "etki_headlight":{"simpleFunction":{"lowbeam":0.49,"highbeam":1}, "off":"etki_lights", "on":"etki_lights_on", "on_intense":"etki_lights_on_intense"},
+            "etki_reverselight":{"simpleFunction":{"reverse":0.49}, "off":"etki_lights", "on":"etki_lights_on", "on_intense":"etki_lights_on_intense"},
+            "etki_foglight":{"simpleFunction":{"fog":0.49}, "off":"etki_lights", "on":"etki_lights_on", "on_intense":"etki_lights_on_intense"},
+
+            "etki_gauges":{"simpleFunction":"lowhighbeam", "off":"etki_gauges", "on":"etki_gauges_on"},
+
+            //gauge lights
+            "signal_L":{"simpleFunction":"signal_L", "off":"invis", "on":"decals_gauges"},
+            "signal_R":{"simpleFunction":"signal_R", "off":"invis", "on":"decals_gauges"},
+            "checkengine":{"simpleFunction":"checkengine", "off":"invis", "on":"decals_gauges"},
+            "battery":{"simpleFunction":"battery", "off":"invis", "on":"decals_gauges"},
+            "highbeam":{"simpleFunction":"highbeam", "off":"invis", "on":"decals_gauges"},
+            "parkingbrake":{"simpleFunction":"parkingbrake", "off":"invis", "on":"decals_gauges"},
+            "lowfuel":{"simpleFunction":"lowfuel", "off":"invis", "on":"decals_gauges"},
+            "lowpressure":{"simpleFunction":"lowpressure", "off":"invis", "on":"invis"},
+            "abs":{"simpleFunction":"abs", "off":"invis", "on":"decals_gauges"},
+    },
+}
+"etki_skin_lights": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Standard Lights",
+        "value":0,
+    },
+    "slotType" : "skin_lights",
+    "globalSkin" : "",
+},
+"etki_skin_lights_alt": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Alternate Lights",
+        "value":100,
+    },
+    "slotType" : "skin_lights",
+    "globalSkin" : "lights_alt",
+},
+"etki_gauges_metric": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Metric Gauges",
+        "value":150,
+    },
+    "slotType" : "skin_gauges",
+    "props": [
+        ["func",       "mesh",               "idRef:", "idX:", "idY:", "baseRotation",            "rotation",                "translation",         "min", "max", "offset", "multiplier"]
+        //needles
+        ["wheelspeed", "etki_needle_speedo", "f1l","f1r","f6l",        {"x":-78, "y":0, "z":180}, {"x":0, "y":0, "z":-3.45}, {"x":0, "y":0, "z":0}, 0, 73, -35, 1],
+        ["rpm",        "etki_needle_tacho",  "f1l","f1r","f6l",        {"x":-78, "y":0, "z":180}, {"x":0, "y":0, "z":-0.03}, {"x":0, "y":0, "z":0}, 0, 7000, -3500, 1],
+        ["fuel",       "etki_needle_fuel",   "f1l","f1r","f6l",        {"x":-78, "y":0, "z":180}, {"x":0, "y":0, "z":-195},  {"x":0, "y":0, "z":0}, 0, 1, -1.04, 1],
+        ["watertemp",  "etki_needle_temp",   "f1l","f1r","f6l",        {"x":-78, "y":0, "z":180}, {"x":0, "y":0, "z":3},     {"x":0, "y":0, "z":0}, 60, 120, 0, 1],
+        ["oiltemp",    "etki_needle_oil",    "f1l","f1r","f6l",        {"x":-62, "y":0, "z":180}, {"x":0, "y":0, "z":-4},    {"x":0, "y":0, "z":0}, 60, 120, 10, 1],
+    ],
+    "skinName" : "metric",
+},
+"etki_gauges_metric_ttsport": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"TTSport Metric Gauges",
+        "value":250,
+    },
+    "slotType" : "skin_gauges",
+    "props": [
+        ["func",       "mesh",               "idRef:", "idX:", "idY:", "baseRotation",            "rotation",                "translation",         "min", "max", "offset", "multiplier"]
+        //needles
+        ["wheelspeed", "etki_needle_speedo", "f1l","f1r","f6l",        {"x":-78, "y":0, "z":180}, {"x":0, "y":0, "z":-3.45}, {"x":0, "y":0, "z":0}, 0, 73, -35, 1],
+        ["rpm",        "etki_needle_tacho",  "f1l","f1r","f6l",        {"x":-78, "y":0, "z":180}, {"x":0, "y":0, "z":-0.03}, {"x":0, "y":0, "z":0}, 0, 7000, -3500, 1],
+        ["fuel",       "etki_needle_fuel",   "f1l","f1r","f6l",        {"x":-78, "y":0, "z":180}, {"x":0, "y":0, "z":-195},  {"x":0, "y":0, "z":0}, 0, 1, -1.04, 1],
+        ["watertemp",  "etki_needle_temp",   "f1l","f1r","f6l",        {"x":-78, "y":0, "z":180}, {"x":0, "y":0, "z":3},     {"x":0, "y":0, "z":0}, 60, 120, 0, 1],
+        ["oiltemp",    "etki_needle_oil",    "f1l","f1r","f6l",        {"x":-62, "y":0, "z":180}, {"x":0, "y":0, "z":-4},    {"x":0, "y":0, "z":0}, 60, 120, 10, 1],
+        ["turboBoost", "etki_needle_boost",  "f1l","f1r","f6l",        {"x":-62, "y":0, "z":180}, {"x":0, "y":0, "z":-12},   {"x":0, "y":0, "z":0}, 0, 30, -10, 1],
+    ],
+    "skinName" : "metric_ttsport",
+},
+"etki_gauges_imperial": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Imperial Gauges",
+        "value":150,
+    },
+    "slotType" : "skin_gauges",
+    "props": [
+        ["func",       "mesh",               "idRef:", "idX:", "idY:", "baseRotation",            "rotation",                "translation",         "min", "max", "offset", "multiplier"]
+        //needles
+        ["wheelspeed", "etki_needle_speedo", "f1l","f1r","f6l",        {"x":-78, "y":0, "z":180}, {"x":0, "y":0, "z":-3.45}, {"x":0, "y":0, "z":0}, 0, 73, -35, 1],
+        ["rpm",        "etki_needle_tacho",  "f1l","f1r","f6l",        {"x":-78, "y":0, "z":180}, {"x":0, "y":0, "z":-0.03}, {"x":0, "y":0, "z":0}, 0, 7000, -3500, 1],
+        ["fuel",       "etki_needle_fuel",   "f1l","f1r","f6l",        {"x":-78, "y":0, "z":180}, {"x":0, "y":0, "z":-195},  {"x":0, "y":0, "z":0}, 0, 1, -1.04, 1],
+        ["watertemp",  "etki_needle_temp",   "f1l","f1r","f6l",        {"x":-78, "y":0, "z":180}, {"x":0, "y":0, "z":3},     {"x":0, "y":0, "z":0}, 60, 120, 0, 1],
+        ["oiltemp",    "etki_needle_oil",    "f1l","f1r","f6l",        {"x":-62, "y":0, "z":180}, {"x":0, "y":0, "z":-4},    {"x":0, "y":0, "z":0}, 60, 120, 10, 1],
+    ],
+    "skinName" : "imperial",
+},
+"etki_gauges_imperial_ttsport": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"TTSport Imperial Gauges",
+        "value":250,
+    },
+    "slotType" : "skin_gauges",
+    "props": [
+        ["func",       "mesh",               "idRef:", "idX:", "idY:", "baseRotation",            "rotation",                "translation",         "min", "max", "offset", "multiplier"]
+        //needles
+        ["wheelspeed", "etki_needle_speedo", "f1l","f1r","f6l",        {"x":-78, "y":0, "z":180}, {"x":0, "y":0, "z":-3.45}, {"x":0, "y":0, "z":0}, 0, 73, -35, 1],
+        ["rpm",        "etki_needle_tacho",  "f1l","f1r","f6l",        {"x":-78, "y":0, "z":180}, {"x":0, "y":0, "z":-0.03}, {"x":0, "y":0, "z":0}, 0, 7000, -3500, 1],
+        ["fuel",       "etki_needle_fuel",   "f1l","f1r","f6l",        {"x":-78, "y":0, "z":180}, {"x":0, "y":0, "z":-195},  {"x":0, "y":0, "z":0}, 0, 1, -1.04, 1],
+        ["watertemp",  "etki_needle_temp",   "f1l","f1r","f6l",        {"x":-78, "y":0, "z":180}, {"x":0, "y":0, "z":3},     {"x":0, "y":0, "z":0}, 60, 120, 0, 1],
+        ["oiltemp",    "etki_needle_oil",    "f1l","f1r","f6l",        {"x":-62, "y":0, "z":180}, {"x":0, "y":0, "z":-4},    {"x":0, "y":0, "z":0}, 60, 120, 10, 1],
+        ["turboBoost", "etki_needle_boost",  "f1l","f1r","f6l",        {"x":-62, "y":0, "z":180}, {"x":0, "y":0, "z":-12},   {"x":0, "y":0, "z":0}, 0, 30, -10, 1],
+    ],
+    "skinName" : "imperial_ttsport",
+},
+"etki_skin_bodycolored": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Body Colored Trim",
+        "value":100,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "bodycolored",
+},
+"etki_skin_basso": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Basso Livery",
+        "value":500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "basso",
+},
+"etki_skin_dreid": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Dreid Livery",
+        "value":500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "dreid",
+},
+"etki_skin_interior": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Black Interior",
+        "value":100,
+    }
+    "slotType" : "skin_interior",
+    "skinName" : "",
+}
+"etki_skin_interior_facelift": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Gray Interior",
+        "value":100,
+    }
+    "slotType" : "skin_interior",
+    "skinName" : "facelift",
+}
+"etki_skin_interior_cream": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Cream & Black Interior",
+        "value":500,
+    }
+    "slotType" : "skin_interior",
+    "globalSkin" : "cream",
+},
+"etki_skin_interior_sport": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"TTSport Interior",
+        "value":1000,
+    }
+    "slotType" : "skin_interior",
+    "globalSkin" : "sport",
+},
+}
