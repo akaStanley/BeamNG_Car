@@ -3,6 +3,9 @@ Car in BeamNG 1/29/16
 
 
 ##Notes:
+Notepad ++:
+Find: & (end of line)
+Find: ^ (start of line)
 
 http://www.quickdiff.com/
 
