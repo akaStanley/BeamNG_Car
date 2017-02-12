@@ -1,0 +1,48 @@
+//Wheel nodes
+// front right
+nl120
+nl117
+
+//Front left
+nr121
+nr124
+
+//Rear Left
+nr38
+nr41
+
+//Rear Right
+nl37
+nl34
+
+		//Suspension beams
+			//Front Left
+			["nr122","nr133"],
+			["nr122","nr111"],
+
+			//Read Left
+			["nr38","nr54"],
+			["nr38","nr26"],
+
+			//Rear Right
+			["nl35","nl23"],
+			["nl35","nl50"],
+
+			//Front Right
+			["nl118","nl108"],
+			["nl118","nl128"],
+			
+For removing duplicates:	
+http://textmechanic.com/text-tools/basic-text-tools/remove-duplicate-lines/
+		
+/////////////			
+["nr122","nr133"],
+["nr122","nr111"],
+["nr38","nr54"],
+["nr38","nr26"],
+["nl35","nl23"],
+["nl35","nl50"],
+["nl118","nl108"],
+["nl118","nl128"],
+//////////
+
