@@ -62,10 +62,10 @@
             {"collision":true}
 
         ["FR", "wheel_FR", "tire_FR", "nl120", "nl117", 9999,  "nl138", -1,  {"hasTire":true, "radius":0.55, "tireWidth":0.2, "speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
-		["FL", "wheel_FL", "tire_Fl", "nr121", "nr124", 9999,  "nr139", 1,  {"hasTire":true,"radius":0.55, "tireWidth":0.2, "speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		["FL", "wheel_FL", "tire_Fl", "nr122", "nr124", 9999,  "nr139", 1,  {"hasTire":true,"radius":0.55, "tireWidth":0.2, "speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
 		 
-		["RR", "wheel_RR", "tire_RR", "nl37", "nl34", 9999,  "nl57", -1,  {"hasTire":true,"radius":0.55, "tireWidth":0.2, "speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
-		["RL", "wheel_RL", "tire_Rl", "nr38", "nr41", 9999,  "nr58", 1,  {"hasTire":true,"radius":0.55, "tireWidth":0.2,  "speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		["RR", "wheel_RR", "tire_RR", "nl36", "nl34", 9999,  "nl57", -1,  {"hasTire":true,"radius":0.55, "tireWidth":0.2, "speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		["RL", "wheel_RL", "tire_Rl", "nr39", "nr41", 9999,  "nr58", 1,  {"hasTire":true,"radius":0.55, "tireWidth":0.2,  "speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
 		
             {"selfCollision":true}
             {"enableHubcaps":false},
