@@ -1,7 +1,7 @@
 {
 	"midget_wheels":{
 		"information":{
-			"name":"Midget",
+			"name":"MG Wheels",
 			"authors":"Spencer"
 			},
 		"slotType":"midget_wheels",
@@ -26,15 +26,21 @@
 	
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+		{"disableMeshBreaking":true},
+		{"disableHubMeshBreaking":false},
+		{"enableHubcaps":false},
+        {"selfCollision":false}
+        {"collision":true}
+		{"wheelOffset":0},
+		
 
-		{"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":true},
-
-        //general settings
-        {"hubRadius":0.2},
-        {"wheelOffset":0},
-        {"hubWidth":0.2},
-        {"numRays":16},
-
+		
+        
+		{"enableTireLbeams":true},
+        {"enableTreadReinfBeams":true},
+        {"enableTireReinfBeams":true},
+			
+		
         //hub options
         {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
         {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
@@ -44,40 +50,41 @@
         {"hubFrictionCoef":0.5},
         {"hubBeamDeform":68600, "hubBeamStrength":76000},
 		
-			{"brakeTorque":15000},
-            {"parkingTorque":15000},
-            {"enableBrakeThermals":false},
-            {"brakeDiameter":false},
-            {"brakeMass":false},
-            {"brakeType":false},
-            {"rotorMaterial":false},
-            {"brakeVentingCoef":false},
-			{"selfCollision":false}
-            {"collision":true}
+		{"radius":0.4},
+		{"tireWidth":0.19},
+
+        {"hubRadius":0.2},
+        {"hubWidth":0.2},
+        {"numRays":16}, //spokes of the weel
 		
-		["FR", "wheel_FR", "wheel_FR", "nl120", "nl117", 9999,  "nl138", -1, {"speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
-		["FL", "wheel_FL", "wheel_FL", "nr122", "nr124", 9999,  "nr139", 1, {"speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
-		 
-		["RR", "wheel_RR", "wheel_RR", "nl36", "nl34", 9999,  "nl57", -1, {"speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
-		["RL", "wheel_RL", "wheel_RL", "nr39", "nr41", 9999,  "nr58", 1, {"speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		{"brakeTorque":15000},
+        {"parkingTorque":15000},
+        //{"enableBrakeThermals":false},
+        //{"brakeDiameter":false},
+        //{"brakeMass":false},
+        //{"brakeType":false},
+        //{"rotorMaterial":false},
+        //{"brakeVentingCoef":false},
 		
-            {"selfCollision":true}
-            {"enableHubcaps":false},
-            //{"enableTireLbeams":false},
-            //{"enableTreadReinfBeams":false},
-            //{"enableTireReinfBeams":false},
-            //{"enableTreadReinfBeams":false},
-			
-			
+		//FRONT
+		["FR", "wheel_FR", "tire_FR", "nl120", "nl117", 9999,  "nl138", -1, {"speedo":false}],
+		
+		["FL", "wheel_FL", "tire_FL", "nr122", "nr124", 9999,  "nr139", 1, {"speedo":false}],
 		 
+		 //REAR
+		["RR", "wheel_RR", "tire_RR", "nl36", "nl34", 9999,  "nl57", -1, {"speedo":true}],
+		
+		["RL", "wheel_RL", "tire_RL", "nr39", "nr41", 9999,  "nr58", 1, {"speedo":true}],	
+		
 	],
 
 		"flexbodies": [
+		//https://www.beamng.com/threads/possible-to-take-wheels-from-one-vehicle-to-put-on-another.30048/
 			["mesh", "[group]:", "nonFlexMaterials"],			
-			["wheel_03a_15x7", ["wheelhub_FR"], [], {"pos":{"x":0.6585, "y":1.158, "z":0.075}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
-			["wheel_03a_15x7", ["wheelhub_FL"], [], {"pos":{"x":-0.6585, "y":1.158, "z":0.075}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
-			["wheel_03a_15x7", ["wheelhub_RR"], [], {"pos":{"x":0.6585, "y":-1.209, "z":0.075}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
-			["wheel_03a_15x7", ["wheelhub_RL"], [], {"pos":{"x":-0.6585, "y":-1.209, "z":0.075}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+			["wheel_03a_15x7", ["wheel_FR"], [], {"pos":{"x":0.6585, "y":1.158, "z":0.075}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+			["wheel_03a_15x7", ["wheel_FL"], [], {"pos":{"x":-0.6585, "y":1.158, "z":0.075}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+			["wheel_03a_15x7", ["wheel_RR"], [], {"pos":{"x":0.6585, "y":-1.209, "z":0.075}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+			["wheel_03a_15x7", ["wheel_RL"], [], {"pos":{"x":-0.6585, "y":-1.209, "z":0.075}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
 			
 		 ], //closing flexbody section
 										 
@@ -90,34 +97,33 @@
 		{"selfCollision":true},
 		
 			{"collision":false},
-			{"group":"wheelhub_FR"},
+			{"group":["wheel_FR","tire_FR"]},
 			["nl117",0.747,1.158,0.075],	//outer center hub
-			["nl118",0.57,1.158,-0.118],
-			["nl119",0.57,1.158,0.269],
 			["nl120",0.57,1.158,0.075],	//inner center
 			{"group":""}, //closing group
+			["nl118",0.57,1.158,-0.118],
+			["nl119",0.57,1.158,0.269],
 			
-			{"group":"wheelhub_FL"},
-			["nr121",-0.57,1.158,-0.118],
+			{"group":["wheel_FL","tire_FL"]},
 			["nr122",-0.57,1.158,0.075],	//inner center
-			["nr123",-0.57,1.158,0.269],
 			["nr124",-0.747,1.158,0.075],	//outer center hub
 			{"group":""}, //closing group
+			["nr121",-0.57,1.158,-0.118],
+			["nr123",-0.57,1.158,0.269],
 			
-			{"group":"wheelhub_RR"},
+			{"group":["wheel_RR","tire_RR"]},
 			["nl34",0.747,-1.209,0.075],	//outer center hub
-			["nl35",0.57,-1.209,-0.118],
-			["nl36",0.57,-1.209,0.075],	//inner center
-			["nl37",0.57,-1.209,0.269],
+			["nl36",0.57,-1.209,0.075],		//inner center
 			{"group":""}, //closing group
-			
-			{"group":"wheelhub_RL"},
-			["nr38",-0.57,-1.209,-0.118],
+			["nl35",0.57,-1.209,-0.118],
+			["nl37",0.57,-1.209,0.269],
+
+			{"group":["wheel_RL","tire_RL"]},
 			["nr39",-0.57,-1.209,0.075],	//inner center
-			["nr40",-0.57,-1.209,0.269],
 			["nr41",-0.747,-1.209,0.075],	//outer center hub
 			{"group":""}, //closing group
-
+			["nr40",-0.57,-1.209,0.269],
+			["nr38",-0.57,-1.209,-0.118],
 			
 			//other moving steering nodes LEFT &RIGHT points of diamond (do not lump in with flexbody)
 			//FL
