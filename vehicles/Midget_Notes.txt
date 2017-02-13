@@ -46,3 +46,29 @@ http://textmechanic.com/text-tools/basic-text-tools/remove-duplicate-lines/
 ["nl118","nl128"],
 //////////
 
+wheel_03a_15x7_F
+			"nl117",1.011,1.566,0.102],	//outer center hub
+			["nl118",0.771,1.566,-0.16],
+			["nl119",0.771,1.566,0.364],
+			["nl120",0.565,1.566,0.102],	//inner center
+			{"group":""}, //closing group
+			
+			{"group":"wheelhub_FL"},
+			["nr121",-0.771,1.566,-0.16],
+			["nr122",-0.771,1.566,0.102],	//inner center
+			["nr123",-0.771,1.566,0.364],
+			["nr124",-1.011,1.566,0.102],	//outer center hub
+			{"group":""}, //closing group
+			
+			{"group":"wheelhub_RR"},
+			["nl34",1.011,-1.635,0.102],	//outer center hub
+			["nl35",0.771,-1.635,-0.16],
+			["nl36",0.771,-1.635,0.102],	//inner center
+			["nl37",0.771,-1.635,0.364],
+			{"group":""}, //closing group
+			
+			{"group":"wheelhub_RL"},
+			["nr38",-0.771,-1.635,-0.16],
+			["nr39",-0.771,-1.635,0.102],	//inner center
+			["nr40",-0.771,-1.635,0.364],
+			["nr41",-1.011,-1.635,0.102],	//outer center hub

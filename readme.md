@@ -15,6 +15,8 @@ car.zip>vehicles>car>allthestuff
 Axels/steering:
 http://docs.rigsofrods.org/vehicle-creation/wheels-axles-steering/
 
+https://www.beamng.com/threads/tutorial-vehicle-performance-and-components-modification-simple.4261/
+
 https://wiki.beamng.com/Vehicle_Creation_Megapage
 
 Gear ratios:

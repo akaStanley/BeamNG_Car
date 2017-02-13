@@ -8,6 +8,9 @@
 		"slots": [
 		["type", "default", "description"]
 		["midget_engine","midget_engine", "Engine"],
+		["tire_R_15x7_alt","tire_R_185_75_15_standard", "Rear Tires"{"nodeOffset":{"x":-1.41, "y":-1.635, "z":0.102}}],
+		["tire_F_15x7_alt","tire_F_185_75_15_standard", "Front Tires"{"nodeOffset":{"x":-1.41, "y":1.566, "z":0.102}}],
+
 	],
 	
 	"controller": [
@@ -50,6 +53,23 @@
 	"pressureWheels": [
 			 ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
 
+			 {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":true},
+
+        //general settings
+        {"hubRadius":0.2},
+        {"wheelOffset":0},
+        {"hubWidth":0.24},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.47},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+		
 			{"brakeTorque":15000},
             {"parkingTorque":15000},
             {"enableBrakeThermals":false},
@@ -61,18 +81,24 @@
 			{"selfCollision":false}
             {"collision":true}
 
-        ["FR", "wheel_FR", "tire_FR", "nl120", "nl117", 9999,  "nl138", -1,  {"hasTire":true, "radius":0.55, "tireWidth":0.2, "speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
-		["FL", "wheel_FL", "tire_Fl", "nr122", "nr124", 9999,  "nr139", 1,  {"hasTire":true,"radius":0.55, "tireWidth":0.2, "speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		//["FR", "wheel_FR", "tire_FR", "nl120", "nl117", 9999,  "nl138", -1, {"speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		//["FL", "wheel_FL", "tire_Fl", "nr122", "nr124", 9999,  "nr139", 1, {"speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
 		 
-		["RR", "wheel_RR", "tire_RR", "nl36", "nl34", 9999,  "nl57", -1,  {"hasTire":true,"radius":0.55, "tireWidth":0.2, "speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
-		["RL", "wheel_RL", "tire_Rl", "nr39", "nr41", 9999,  "nr58", 1,  {"hasTire":true,"radius":0.55, "tireWidth":0.2,  "speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		//["RR", "wheel_RR", "tire_RR", "nl36", "nl34", 9999,  "nl57", -1, {"speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		//["RL", "wheel_RL", "tire_Rl", "nr39", "nr41", 9999,  "nr58", 1, {"speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		
+		["FR", "wheel_FR", "wheel_FR", "nl120", "nl117", 9999,  "nl138", -1, {"speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		["FL", "wheel_FL", "wheel_FL", "nr122", "nr124", 9999,  "nr139", 1, {"speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 
+		["RR", "wheel_RR", "wheel_RR", "nl36", "nl34", 9999,  "nl57", -1, {"speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		["RL", "wheel_RL", "wheel_RL", "nr39", "nr41", 9999,  "nr58", 1, {"speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
 		
             {"selfCollision":true}
             {"enableHubcaps":false},
-            {"enableTireLbeams":false},
-            {"enableTreadReinfBeams":false},
-            {"enableTireReinfBeams":false},
-            {"enableTreadReinfBeams":false},
+            //{"enableTireLbeams":false},
+            //{"enableTreadReinfBeams":false},
+            //{"enableTireReinfBeams":false},
+            //{"enableTreadReinfBeams":false},
 			
 			
 		 
@@ -82,7 +108,13 @@
 			["mesh", "[group]:", "nonFlexMaterials"],
 			["body", ["MG_Body_group"]],
 			["window_frame", ["window_group"]],
-		 ], 
+			
+			["wheel_03a_15x7", ["wheelhub_FR"], [], {"pos":{"x":0.891, "y":1.566, "z":0.102}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+			["wheel_03a_15x7", ["wheelhub_FL"], [], {"pos":{"x":-0.891, "y":1.566, "z":0.102}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+			["wheel_03a_15x7", ["wheelhub_RR"], [], {"pos":{"x":0.891, "y":-1.635, "z":0.102}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+			["wheel_03a_15x7", ["wheelhub_RL"], [], {"pos":{"x":-0.891, "y":-1.635, "z":0.102}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+			
+		 ], //closing flexbody section
 										 
 //--Nodes--
 		"nodes":[
@@ -233,31 +265,47 @@
 			["n87",0.0,0.762,0.0],
 			{"group":""}, //closing group
 			
-			// Wheel hub nodes (this will be useful later I hope)
-			["nl34",1.011,-1.635,0.102],
-			["nl35",0.771,-1.635,-0.16],
-			["nl36",0.771,-1.635,0.102],
-			["nl37",0.771,-1.635,0.364],
-			["nl20",0.771,-1.985,0.102],
-			["nl57",0.771,-1.285,0.102],
-			["nr38",-0.771,-1.635,-0.16],
-			["nr39",-0.771,-1.635,0.102],
-			["nr40",-0.771,-1.635,0.364],
-			["nr41",-1.011,-1.635,0.102],			
-			["nr21",-0.771,-1.985,0.102],
-			["nr58",-0.771,-1.285,0.102],
+			{"collision":false},
+			{"group":"wheelhub_FR"},
+			["nl117",1.011,1.566,0.102],	//outer center hub
+			["nl118",0.771,1.566,-0.16],
+			["nl119",0.771,1.566,0.364],
+			["nl120",0.771,1.566,0.102],	//inner center
+			{"group":""}, //closing group
+			
+			{"group":"wheelhub_FL"},
 			["nr121",-0.771,1.566,-0.16],
-			["nr122",-0.771,1.566,0.102],
+			["nr122",-0.771,1.566,0.102],	//inner center
 			["nr123",-0.771,1.566,0.364],
-			["nr124",-1.011,1.566,0.102],			
+			["nr124",-1.011,1.566,0.102],	//outer center hub
+			{"group":""}, //closing group
+			
+			{"group":"wheelhub_RR"},
+			["nl34",1.011,-1.635,0.102],	//outer center hub
+			["nl35",0.771,-1.635,-0.16],
+			["nl36",0.771,-1.635,0.102],	//inner center
+			["nl37",0.771,-1.635,0.364],
+			{"group":""}, //closing group
+			
+			{"group":"wheelhub_RL"},
+			["nr38",-0.771,-1.635,-0.16],
+			["nr39",-0.771,-1.635,0.102],	//inner center
+			["nr40",-0.771,-1.635,0.364],
+			["nr41",-1.011,-1.635,0.102],	//outer center hub
+			{"group":""}, //closing group
+			
+			
+			// Wheel hub nodes (this will be useful later I hope)
+			{"collision":true},
+			["nl20",0.771,-1.985,0.102],
+			["nl57",0.771,-1.285,0.102],		
+			["nr21",-0.771,-1.985,0.102],
+			["nr58",-0.771,-1.285,0.102],			
 			["nr104",-0.771,1.216,0.102],			
 			["nr138",-0.771,1.916,0.102],			
 			["nl137",0.771,1.916,0.102],			
 			["nl103",0.771,1.216,0.102],
-			["nl117",1.011,1.566,0.102],
-			["nl118",0.771,1.566,-0.16],
-			["nl119",0.771,1.566,0.364],
-			["nl120",0.565,1.566,0.102],
+
 			],
 			
 //--Beams--
