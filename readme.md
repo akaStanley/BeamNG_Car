@@ -1,6 +1,6 @@
 #Spencer Kulbacki
 Car in BeamNG 1/29/16
-
+https://en.wikipedia.org/wiki/MG_Midget
 
 ##Notes:
 Notepad ++:
@@ -8,7 +8,8 @@ Find: & (end of line)
 Find: ^ (start of line)
 
 http://www.quickdiff.com/
-
+http://textmechanic.com/text-tools/basic-text-tools/sort-text-lines/
+http://textmechanic.com/text-tools/basic-text-tools/remove-duplicate-lines/
 folder path goes like this:  
 car.zip>vehicles>car>allthestuff
 

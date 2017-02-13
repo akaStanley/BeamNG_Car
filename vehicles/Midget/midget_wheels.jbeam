@@ -1,0 +1,168 @@
+{
+	"midget_wheels":{
+		"information":{
+			"name":"Midget",
+			"authors":"Spencer"
+			},
+		"slotType":"wheels",
+		"slots": [
+		["type", "default", "description"]
+		["tire_R_15x7_alt","tire_R_195_65_15_alt_sport", "Rear Tires"{"nodeOffset":{"x":-1.175, "y":-1.209, "z":0.075}}],
+		["tire_F_15x7_alt","tire_F_195_65_15_alt_sport", "Front Tires"{"nodeOffset":{"x":-1.175, "y":1.158, "z":0.075}}],
+
+	],
+	
+
+
+		
+		"hydros": [
+        ["id1:","id2:"],
+			["nr138","n109",{"factor":-0.25,"steeringWheelLock":550}],
+			["n130","nr104",{"factor":0.25,"steeringWheelLock":550}],
+			
+			["nl137","n109",{"factor":0.25,"steeringWheelLock":550}],
+			["n130","nl103",{"factor":-0.25,"steeringWheelLock":550}],		
+		]
+		//usually hydros go right afte the beams section
+	
+	
+	"pressureWheels": [
+			 ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+
+			 {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":true},
+
+        //general settings
+        {"hubRadius":0.2},
+        {"wheelOffset":0},
+        {"hubWidth":0.2},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.47},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+		
+			{"brakeTorque":15000},
+            {"parkingTorque":15000},
+            {"enableBrakeThermals":false},
+            {"brakeDiameter":false},
+            {"brakeMass":false},
+            {"brakeType":false},
+            {"rotorMaterial":false},
+            {"brakeVentingCoef":false},
+			{"selfCollision":false}
+            {"collision":true}
+		
+		["FR", "wheel_FR", "wheel_FR", "nl120", "nl117", 9999,  "nl138", -1, {"speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		["FL", "wheel_FL", "wheel_FL", "nr122", "nr124", 9999,  "nr139", 1, {"speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		 
+		["RR", "wheel_RR", "wheel_RR", "nl36", "nl34", 9999,  "nl57", -1, {"speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		["RL", "wheel_RL", "wheel_RL", "nr39", "nr41", 9999,  "nr58", 1, {"speedo":true, "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+		
+            {"selfCollision":true}
+            {"enableHubcaps":false},
+            //{"enableTireLbeams":false},
+            //{"enableTreadReinfBeams":false},
+            //{"enableTireReinfBeams":false},
+            //{"enableTreadReinfBeams":false},
+			
+			
+		 
+	],
+
+		"flexbodies": [
+			["mesh", "[group]:", "nonFlexMaterials"],			
+			["wheel_03a_15x7", ["wheelhub_FR"], [], {"pos":{"x":0.6585, "y":1.158, "z":0.075}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+			["wheel_03a_15x7", ["wheelhub_FL"], [], {"pos":{"x":-0.6585, "y":1.158, "z":0.075}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+			["wheel_03a_15x7", ["wheelhub_RR"], [], {"pos":{"x":0.6585, "y":-1.209, "z":0.075}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+			["wheel_03a_15x7", ["wheelhub_RL"], [], {"pos":{"x":-0.6585, "y":-1.209, "z":0.075}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+			
+		 ], //closing flexbody section
+										 
+//--Nodes--
+		"nodes":[
+			["id", "posX", "posY", "posZ"],
+		{"nodeWeight":6},
+		{"frictionCoef":0.7},
+		{"nodeMaterial":"|NM_METAL"},
+		{"selfCollision":true},
+		
+			{"collision":false},
+			{"group":"wheelhub_FR"},
+			["nl117",0.747,1.158,0.075],	//outer center hub
+			["nl118",0.57,1.158,-0.118],
+			["nl119",0.57,1.158,0.269],
+			["nl120",0.57,1.158,0.075],	//inner center
+			{"group":""}, //closing group
+			
+			{"group":"wheelhub_FL"},
+			["nr121",-0.57,1.158,-0.118],
+			["nr122",-0.57,1.158,0.075],	//inner center
+			["nr123",-0.57,1.158,0.269],
+			["nr124",-0.747,1.158,0.075],	//outer center hub
+			{"group":""}, //closing group
+			
+			{"group":"wheelhub_RR"},
+			["nl34",0.747,-1.209,0.075],	//outer center hub
+			["nl35",0.57,-1.209,-0.118],
+			["nl36",0.57,-1.209,0.075],	//inner center
+			["nl37",0.57,-1.209,0.269],
+			{"group":""}, //closing group
+			
+			{"group":"wheelhub_RL"},
+			["nr38",-0.57,-1.209,-0.118],
+			["nr39",-0.57,-1.209,0.075],	//inner center
+			["nr40",-0.57,-1.209,0.269],
+			["nr41",-0.747,-1.209,0.075],	//outer center hub
+			{"group":""}, //closing group
+
+			
+			//other moving steering nodes LEFT &RIGHT points of diamond (do not lump in with flexbody)
+			//FL
+			["nr104",-0.57,0.899,0.075],
+			["nr138",-0.57,1.416,0.075],
+			//FR
+			["nl103",0.57,0.899,0.075],
+			["nl137",0.57,1.416,0.075],
+			//RR
+			["nl57",0.57,-0.95,0.075],
+			["nl20",0.57,-1.467,0.075],
+			//RL
+			["nr58",-0.57,-0.95,0.075],
+			["nr21",-0.57,-1.467,0.075],
+			
+			],
+			
+//--Beams--
+		"beams":[
+			["id1:", "id2:"],
+			
+			//suspension beams
+			{"beamPrecompression":1.235, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.37},
+			{"beamDeform":133750,"beamStrength":171250},
+			{"beamSpring":36000,"beamDamp":100},
+			//36000
+			//Front Left
+			["nr122","nr133"],
+			["nr122","nr111"],
+
+			//Read Left
+			["nr38","nr54"],
+			["nr38","nr26"],
+
+			//Rear Right
+			["nl35","nl23"],
+			["nl35","nl50"],
+
+			//Front Right
+			["nl118","nl108"],
+			["nl118","nl128"],
+			
+		
+			],
+	}
+}
