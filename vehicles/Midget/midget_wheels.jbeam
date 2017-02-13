@@ -33,9 +33,13 @@
         {"collision":true}
 		{"wheelOffset":0},
 		
-
+			{"radius":0.3},
+            {"hubRadius":0.2},
+            {"wheelOffset":0},
+            {"hubWidth":0.2},
+            {"tireWidth":0.19},
+            {"numRays":16}, //spokes of the weel
 		
-        
 		{"enableTireLbeams":true},
         {"enableTreadReinfBeams":true},
         {"enableTireReinfBeams":true},
@@ -47,15 +51,34 @@
         {"hubSideBeamSpring":1651000, "hubSideBeamDamp":10},
         {"hubNodeWeight":0.47},
         {"hubNodeMaterial":"|NM_METAL"},
+		 
+
         {"hubFrictionCoef":0.5},
         {"hubBeamDeform":68600, "hubBeamStrength":76000},
 		
-		{"radius":0.4},
-		{"tireWidth":0.19},
+		//tire options
+		{"wheelSideBeamSpring":5000,"wheelSideBeamDamp":10},
+        {"wheelSideBeamSpringExpansion":260000,"wheelSideBeamDampExpansion":20},
+        {"wheelSideTransitionZone":0.1,"wheelSideBeamPrecompression":0.98},
 
-        {"hubRadius":0.2},
-        {"hubWidth":0.2},
-        {"numRays":16}, //spokes of the weel
+        {"wheelReinfBeamSpring":27000,"wheelReinfBeamDamp":20},
+        {"wheelReinfBeamSpringExpansion":27000,"wheelReinfBeamDampExpansion":20},
+        {"wheelReinfTransitionZone":0.0,"wheelReinfBeamPrecompression":0.96},
+
+        {"wheelTreadBeamSpring":201000,"wheelTreadBeamDamp":25},
+        {"wheelTreadBeamPrecompression":0.97},
+
+        {"wheelPeripheryBeamSpring":301000,"wheelPeripheryBeamDamp":15},
+        {"wheelPeripheryBeamPrecompression":0.98},
+			
+		{"nodeWeight":0.12},
+        {"nodeMaterial":"|NM_RUBBER"},
+        {"frictionCoef":1.05},
+        {"triangleCollision":false},
+        {"pressurePSI":30},
+        {"maxPressurePSI":1200},
+        {"dragCoef":10},
+		
 		
 		{"brakeTorque":15000},
         {"parkingTorque":15000},
