@@ -4,17 +4,15 @@
 			"name":"Midget",
 			"authors":"Spencer"
 			},
-		"slotType":"wheels",
+		"slotType":"midget_wheels",
+		
 		"slots": [
 		["type", "default", "description"]
 		["tire_R_15x7_alt","tire_R_195_65_15_alt_sport", "Rear Tires"{"nodeOffset":{"x":-1.175, "y":-1.209, "z":0.075}}],
 		["tire_F_15x7_alt","tire_F_195_65_15_alt_sport", "Front Tires"{"nodeOffset":{"x":-1.175, "y":1.158, "z":0.075}}],
 
-	],
+		],
 	
-
-
-		
 		"hydros": [
         ["id1:","id2:"],
 			["nr138","n109",{"factor":-0.25,"steeringWheelLock":550}],
@@ -27,9 +25,9 @@
 	
 	
 	"pressureWheels": [
-			 ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
 
-			 {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":true},
+		{"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":true},
 
         //general settings
         {"hubRadius":0.2},
