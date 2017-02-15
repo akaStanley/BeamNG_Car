@@ -15,11 +15,20 @@
 	
 		"hydros": [
         ["id1:","id2:"],
+		//"original" V1 steering
 			["nr138","n109",{"factor":-0.25,"steeringWheelLock":550}],
 			["n130","nr104",{"factor":0.25,"steeringWheelLock":550}],
 			
 			["nl137","n109",{"factor":0.25,"steeringWheelLock":550}],
-			["n130","nl103",{"factor":-0.25,"steeringWheelLock":550}],		
+			["n130","nl103",{"factor":-0.25,"steeringWheelLock":550}],	
+			
+			//"new" steering?
+			//    no.
+			//["nr138","nl108",{"factor":-0.25,"steeringWheelLock":550}],
+			//["nl128","nr104",{"factor":0.25,"steeringWheelLock":550}],
+			
+			//["nl137","nr111",{"factor":0.25,"steeringWheelLock":550}],
+			//["nr133","nl103",{"factor":-0.25,"steeringWheelLock":550}],				
 		]
 		//usually hydros go right afte the beams section
 	
@@ -169,26 +178,34 @@
 			["id1:", "id2:"],
 			
 			//suspension beams
-			{"beamPrecompression":1.235, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.37},
+			{"beamPrecompression":2.235, "beamType":"|BOUNDED", "beamLongBound":3, "beamShortBound":0.37},
 			{"beamDeform":133750,"beamStrength":171250},
-			{"beamSpring":36000,"beamDamp":100},
+			{"beamSpring":100,"beamDamp":200},
 			//36000
-			//Front Left
-			["nr122","nr133"],
-			["nr122","nr111"],
-
+	
 			//Read Left
 			["nr38","nr54"],
 			["nr38","nr26"],
-
 			//Rear Right
 			["nl35","nl23"],
 			["nl35","nl50"],
-
+			
+			{"beamPrecompression":2.235, "beamType":"|BOUNDED", "beamLongBound":3, "beamShortBound":0.1},
+			//Front Left
+			["nr122","nr133"],
+			["nr122","nr111"],
 			//Front Right
 			["nl118","nl108"],
 			["nl118","nl128"],
 			
+			//front shock absorbers
+			{"beamPrecompression":2.235, "beamType":"|BOUNDED", "beamLongBound":3, "beamShortBound":0.37},
+			{"beamDeform":133750,"beamStrength":171250},
+			{"beamSpring":100,"beamDamp":200},
+			//36000
+			//Left
+			["nr123","nr116"],
+
 		
 			],
 	}
