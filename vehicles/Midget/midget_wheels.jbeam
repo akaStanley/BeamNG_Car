@@ -8,11 +8,11 @@
 		
 		"slots": [
 		["type", "default", "description"]
-		["tire_R_15x7_alt","tire_R_195_65_15_alt_sport", "Rear Tires"{"nodeOffset":{"x":-1.175, "y":-1.209, "z":0.075}}],
+		["tire_R_15x7_alt","tire_R_195_65_15_alt_sport", "Rear Tires"{"nodeOffset":{"x":-1.175, "y":-1.209, "z":0.0}}],
 		//mg is 145 74 R13
 		// 22.3" dia 4.5" width
 		//	0.565m dia  0.115m width
-		["tire_F_15x7_alt","tire_F_195_65_15_alt_sport", "Front Tires"{"nodeOffset":{"x":-1.175, "y":1.158, "z":0.075}}],
+		["tire_F_15x7_alt","tire_F_195_65_15_alt_sport", "Front Tires"{"nodeOffset":{"x":-1.175, "y":1.158, "z":0.0}}],
 
 		],
 	
@@ -113,10 +113,10 @@
 		"flexbodies": [
 		//https://www.beamng.com/threads/possible-to-take-wheels-from-one-vehicle-to-put-on-another.30048/
 			["mesh", "[group]:", "nonFlexMaterials"],			
-			["wheel_03a_15x7", ["wheel_FR"], [], {"pos":{"x":0.6585, "y":1.158, "z":0.075}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
-			["wheel_03a_15x7", ["wheel_FL"], [], {"pos":{"x":-0.6585, "y":1.158, "z":0.075}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
-			["wheel_03a_15x7", ["wheel_RR"], [], {"pos":{"x":0.6585, "y":-1.209, "z":0.075}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
-			["wheel_03a_15x7", ["wheel_RL"], [], {"pos":{"x":-0.6585, "y":-1.209, "z":0.075}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+			["wheel_03a_15x7", ["wheel_FR"], [], {"pos":{"x":0.6585, "y":1.158, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+			["wheel_03a_15x7", ["wheel_FL"], [], {"pos":{"x":-0.6585, "y":1.158, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+			["wheel_03a_15x7", ["wheel_RR"], [], {"pos":{"x":0.6585, "y":-1.209, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+			["wheel_03a_15x7", ["wheel_RL"], [], {"pos":{"x":-0.6585, "y":-1.209, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
 			
 		 ], //closing flexbody section
 										 
@@ -174,7 +174,7 @@
 			
 			{"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
 			{"beamDeform":95000,"beamStrength":350000},
-			{"beamSpring":80010,"beamDamp":200},
+			{"beamSpring":8001000,"beamDamp":2000},//200
 			//Front left:
 			["nr127","nr129"],
 			//Front right:
@@ -191,7 +191,7 @@
 			
 			{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.28, "beamShortBound":0.34},
 			{"beamSpring":0,"beamDamp":0,"beamDeform":165000,"beamStrength":900000},
-			{"beamLimitSpring":25010,"beamLimitDamp":2000},
+			{"beamLimitSpring":2501000,"beamLimitDamp":20000},//2000
 			
 			//front right limiter
 			["nl125","nl122"],			
