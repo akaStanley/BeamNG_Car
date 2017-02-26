@@ -18,8 +18,12 @@
 	
 		"hydros": [
         ["id1:","id2:"],
-			["nr145","n137",{"factor":-0.3,"steeringWheelLock":460}],
-			["n137","nl144",{"factor":0.3,"steeringWheelLock":460}],			
+		//left
+			["nr145","n137",{"factor":-0.2,"steeringWheelLock":400}],
+			["nr118","n115",{"factor":0.2,"steeringWheelLock":400}],
+		//right
+			["n137","nl144",{"factor":0.2,"steeringWheelLock":400}],	
+			["n115","nl112",{"factor":-0.2,"steeringWheelLock":400}],				
 		]
 		//usually hydros go right afte the beams section
 		
@@ -29,8 +33,8 @@
 		
 		"slidenodes": [
 			["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
-			["nl134", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front right
-			["nr139", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front left
+			//["nl134", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front right
+			//["nr139", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front left
 		],
 	
 	"pressureWheels": [
@@ -181,8 +185,9 @@
 			["nr127","nr129"],
 			//Front right:
 			["nl125","nl123"],
-
 			
+			
+			{"beamSpring":10000,"beamDamp":200},
 			//rear left:
 			["nr41","nr12"],
 			["nr41","nr67"],
@@ -192,14 +197,14 @@
 			["nl38","nl11"],
 			
 			// === Limiters ===
-			//{"beamLimitSpring":8001000,"beamLimitDamp":1200},
-			//{"beamSpring":0,"beamDamp":0,"beamDeform":500000,"beamStrength":1000000},
-			//{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.05, "beamShortBound":0.4},
+			{"beamLimitSpring":8001000,"beamLimitDamp":1200},
+			{"beamSpring":0,"beamDamp":0,"beamDeform":500000,"beamStrength":1000000},
+			{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.05, "beamShortBound":0.4},
 			
 			//front right limiter
-			//["nl125","nl122"],			
+			["nl125","nl122"],			
 			//front left limiter
-			//["nr127","nr128"],
+			["nr127","nr128"],
 			
 			],
 	}
