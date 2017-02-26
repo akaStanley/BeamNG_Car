@@ -30,7 +30,7 @@
             [7000, 142],
             [8000, 95],
         ],
-        "torqueReactionNodes:":["n99","n98","n87"] 	//turns out these are required.
+        "torqueReactionNodes:":["n137","n115","nl113"] 	//turns out these are required.
         "idleRPM":650,
         "maxRPM":4500,
         "inertia":0.11,

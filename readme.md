@@ -4,7 +4,7 @@ https://en.wikipedia.org/wiki/MG_Midget
 
 ##Notes:
 Notepad ++:
-Find: & (end of line)
+Find: & or $ (end of line)
 Find: ^ (start of line)
 
 http://www.quickdiff.com/

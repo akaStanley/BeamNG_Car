@@ -3,6 +3,8 @@ Wishbone suspension like  3d chevron
 coil goes from underside of wheel well to bottom of middle upper chevron
 limiter goes from same start to wheel attach of bottom chevron
 
+E:\Program Files (x86)\Steam\steamapps\common\BeamNG.drive\content\vehicles\common.zip\vehicles\common\wheels
+
 //Wheel nodes
 // front right
 nl120
@@ -52,3 +54,26 @@ http://textmechanic.com/text-tools/basic-text-tools/remove-duplicate-lines/
 //////////
 
 -0.747,1.158,0.075
+
+//mg is 145 74 R13
+// 22.3" dia 4.5" width
+//	0.565m dia  0.115m width
+
+
+Front left:
+			["nr127","nr128"],
+			["nr127","nr129"],
+29 top
+
+Front right:
+			["nl125","nl122"],
+			["nl125","nl123"],
+23 top
+
+rear right:
+			["nl38","nl66"],
+			["nl38","nl11"],
+rear right:
+			["nr41","nr12"],
+			["nr41","nr67"],
+		

@@ -18,23 +18,20 @@
 	
 		"hydros": [
         ["id1:","id2:"],
-		//"original" V1 steering
-			["nr138","n109",{"factor":-0.25,"steeringWheelLock":550}],
-			["n130","nr104",{"factor":0.25,"steeringWheelLock":550}],
-			
-			["nl137","n109",{"factor":0.25,"steeringWheelLock":550}],
-			["n130","nl103",{"factor":-0.25,"steeringWheelLock":550}],	
-			
-			//"new" steering?
-			//    no.
-			//["nr138","nl108",{"factor":-0.25,"steeringWheelLock":550}],
-			//["nl128","nr104",{"factor":0.25,"steeringWheelLock":550}],
-			
-			//["nl137","nr111",{"factor":0.25,"steeringWheelLock":550}],
-			//["nr133","nl103",{"factor":-0.25,"steeringWheelLock":550}],				
+			["nr145","n137",{"factor":-0.4,"steeringWheelLock":550}],
+			["n137","nl144",{"factor":0.4,"steeringWheelLock":550}],			
 		]
 		//usually hydros go right afte the beams section
-	
+		
+		"rails": {
+			"SteeringArm":{"links:":["nr145", "n137", "nl144"], "looped":false, "capped":true}
+		},
+		
+		"slidenodes": [
+			["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
+			["nl134", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front right
+			["nr139", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front left
+		],
 	
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -44,16 +41,16 @@
         {"selfCollision":false}
         {"collision":true}
 		{"wheelOffset":0},
-		
-			{"radius":0.3},
-            {"hubRadius":0.2},
+				//	0.565m dia  0.115m width
+			{"radius":0.282},	//0.565m dia
+            {"hubRadius":0.165}, //0.33m dia
             {"wheelOffset":0},
-            {"hubWidth":0.2},
-            {"tireWidth":0.19},
+            {"hubWidth":0.12},
+            {"tireWidth":0.115},	//0.115m width
             {"numRays":16}, //spokes of the weel
 		
 		{"enableTireLbeams":true},
-        {"enableTreadReinfBeams":true},
+        {"enableTreadReinfBeams":false},
         {"enableTireReinfBeams":true},
 			
 		
@@ -102,14 +99,14 @@
         //{"brakeVentingCoef":false},
 		
 		//FRONT
-		["FR", "wheel_FR", "tire_FR", "nl120", "nl117", 9999,  "nl138", -1, {"speedo":true}],
+		["FR", "wheel_FR", "tire_FR", "nl123", "nl121", 9999,  "nl112", -1, {"speedo":true}],
 		
-		["FL", "wheel_FL", "tire_FL", "nr122", "nr124", 9999,  "nr139", 1, {"speedo":true}],
+		["FL", "wheel_FL", "tire_FL", "nr129", "nr131", 9999,  "nr118", 1, {"speedo":true}],
 		 
 		 //REAR
-		["RR", "wheel_RR", "tire_RR", "nl36", "nl34", 9999,  "nl57", -1, {"speedo":false}],
+		["RR", "wheel_RR", "tire_RR", "nl38", "nl36", 9999,  "nl49", -1, {"speedo":false}],
 		
-		["RL", "wheel_RL", "tire_RL", "nr39", "nr41", 9999,  "nr58", 1, {"speedo":false}],	
+		["RL", "wheel_RL", "tire_RL", "nr41", "nr43", 9999,  "nr50", 1, {"speedo":false}],	
 		
 	],
 
@@ -133,46 +130,40 @@
 		
 			{"collision":false},
 			{"group":["wheel_FR","tire_FR"]},
-			["nl117",0.747,1.158,0.075],	//outer center hub
-			["nl120",0.57,1.158,0.075],	//inner center
+			["nl121",0.725,1.158,0.0],		//outer center hub
+			["nl123",0.615,1.158,0.0],	//inner center
 			{"group":""}, //closing group
-			["nl118",0.57,1.158,-0.118],
-			["nl119",0.57,1.158,0.269],
+			["nl122",0.615,1.158,-0.114],
+			["nl124",0.615,1.158,0.148],
+			["nl112",0.615,0.997,0.0],
+			["nl144",0.615,1.373,0.0],
 			
 			{"group":["wheel_FL","tire_FL"]},
-			["nr122",-0.57,1.158,0.075],	//inner center
-			["nr124",-0.747,1.158,0.075],	//outer center hub
+			["nr131",-0.725,1.158,0.0],		//outer center hub
+			["nr129",-0.615,1.158,0.0],	//inner center
 			{"group":""}, //closing group
-			["nr121",-0.57,1.158,-0.118],
-			["nr123",-0.57,1.158,0.269],
+			["nr128",-0.615,1.158,-0.114],
+			["nr130",-0.615,1.158,0.148],
+			["nr118",-0.615,0.997,0.0],
+			["nr145",-0.615,1.373,0.0],
 			
 			{"group":["wheel_RR","tire_RR"]},
-			["nl34",0.747,-1.209,0.075],	//outer center hub
-			["nl36",0.57,-1.209,0.075],		//inner center
+			["nl36",0.725,-1.209,0.0],		//outer center hub
+			["nl38",0.615,-1.209,0.0],	//inner center
 			{"group":""}, //closing group
-			["nl35",0.57,-1.209,-0.118],
-			["nl37",0.57,-1.209,0.269],
+			["nl37",0.615,-1.209,-0.13],
+			["nl39",0.615,-1.209,0.122],
+			["nl34",0.615,-1.359,0.0],
+			["nl49",0.615,-1.065,0.0],
 
 			{"group":["wheel_RL","tire_RL"]},
-			["nr39",-0.57,-1.209,0.075],	//inner center
-			["nr41",-0.747,-1.209,0.075],	//outer center hub
+			["nr43",-0.725,-1.209,0.0],		//outer center hub
+			["nr41",-0.615,-1.209,0.0],	//inner center
 			{"group":""}, //closing group
-			["nr40",-0.57,-1.209,0.269],
-			["nr38",-0.57,-1.209,-0.118],
-			
-			//other moving steering nodes LEFT &RIGHT points of diamond (do not lump in with flexbody)
-			//FL
-			["nr104",-0.57,0.899,0.075],
-			["nr138",-0.57,1.416,0.075],
-			//FR
-			["nl103",0.57,0.899,0.075],
-			["nl137",0.57,1.416,0.075],
-			//RR
-			["nl57",0.57,-0.95,0.075],
-			["nl20",0.57,-1.467,0.075],
-			//RL
-			["nr58",-0.57,-0.95,0.075],
-			["nr21",-0.57,-1.467,0.075],
+			["nr40",-0.615,-1.209,-0.13],
+			["nr42",-0.615,-1.209,0.122],
+			["nr35",-0.615,-1.359,0.0],
+			["nr50",-0.615,-1.065,0.0],
 			
 			],
 			
@@ -180,36 +171,33 @@
 		"beams":[
 			["id1:", "id2:"],
 			
-			//suspension beams
-			{"beamPrecompression":2.235, "beamType":"|BOUNDED", "beamLongBound":3, "beamShortBound":0.37},
-			{"beamDeform":133750,"beamStrength":171250},
-			{"beamSpring":100,"beamDamp":200},
-			//36000
-	
-			//Read Left
-			["nr38","nr54"],
-			["nr38","nr26"],
-			//Rear Right
-			["nl35","nl23"],
-			["nl35","nl50"],
 			
-			{"beamPrecompression":2.235, "beamType":"|BOUNDED", "beamLongBound":3, "beamShortBound":0.1},
-			//Front Left
-			["nr122","nr133"],
-			["nr122","nr111"],
-			//Front Right
-			["nl118","nl108"],
-			["nl118","nl128"],
-			
-			//front shock absorbers
-			{"beamPrecompression":2.235, "beamType":"|BOUNDED", "beamLongBound":3, "beamShortBound":0.37},
-			{"beamDeform":133750,"beamStrength":171250},
-			{"beamSpring":100,"beamDamp":200},
-			//36000
-			//Left
-			["nr123","nr116"],
+			{"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+			{"beamDeform":95000,"beamStrength":350000},
+			{"beamSpring":80010,"beamDamp":200},
+			//Front left:
+			["nr127","nr129"],
+			//Front right:
+			["nl125","nl123"],
 
-		
+			
+			//rear left:
+			["nr41","nr12"],
+			["nr41","nr67"],
+			
+			//rear right:
+			["nl38","nl66"],
+			["nl38","nl11"],
+			
+			{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.28, "beamShortBound":0.34},
+			{"beamSpring":0,"beamDamp":0,"beamDeform":165000,"beamStrength":900000},
+			{"beamLimitSpring":25010,"beamLimitDamp":2000},
+			
+			//front right limiter
+			["nl125","nl122"],			
+			//front left limiter
+			["nr127","nr128"],
+			
 			],
 	}
 }
