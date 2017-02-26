@@ -89,14 +89,14 @@
         {"dragCoef":10},
 		
 		
-		{"brakeTorque":15000},
-        {"parkingTorque":15000},
-        //{"enableBrakeThermals":false},
-        //{"brakeDiameter":false},
-        //{"brakeMass":false},
-        //{"brakeType":false},
-        //{"rotorMaterial":false},
-        //{"brakeVentingCoef":false},
+		{"brakeTorque":600},
+        {"parkingTorque":0},
+        {"enableBrakeThermals":false},
+        {"brakeDiameter":false},
+        {"brakeMass":false},
+        {"brakeType":false},
+        {"rotorMaterial":false},
+        {"brakeVentingCoef":false},
 		
 		//FRONT
 		["FR", "wheel_FR", "tire_FR", "nl123", "nl121", 9999,  "nl112", -1, {"speedo":true}],
@@ -173,8 +173,10 @@
 			
 			
 			{"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
-			{"beamDeform":95000,"beamStrength":350000},
-			{"beamSpring":8001000,"beamDamp":2000},//200
+			//{"beamDeform":95000,"beamStrength":350000},
+			//{"beamSpring":8001000,"beamDamp":2},//200
+			{"beamSpring":5911000,"beamDamp":1575},
+			{"beamDeform":61000,"beamStrength":350000},
 			//Front left:
 			["nr127","nr129"],
 			//Front right:
@@ -189,9 +191,13 @@
 			["nl38","nl66"],
 			["nl38","nl11"],
 			
-			{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.28, "beamShortBound":0.34},
-			{"beamSpring":0,"beamDamp":0,"beamDeform":165000,"beamStrength":900000},
-			{"beamLimitSpring":2501000,"beamLimitDamp":20000},//2000
+			//{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.28, "beamShortBound":0.34},
+			//{"beamSpring":0,"beamDamp":0,"beamDeform":165000,"beamStrength":900000},
+			//{"beamLimitSpring":2501000,"beamLimitDamp":2000},
+			
+			{"beamLimitSpring":8001000,"beamLimitDamp":1200},
+			{"beamSpring":0,"beamDamp":0,"beamDeform":500000,"beamStrength":1000000},
+			{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.05, "beamShortBound":0.4},
 			
 			//front right limiter
 			["nl125","nl122"],			
