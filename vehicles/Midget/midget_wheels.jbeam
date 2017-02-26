@@ -9,6 +9,9 @@
 		"slots": [
 		["type", "default", "description"]
 		["tire_R_15x7_alt","tire_R_195_65_15_alt_sport", "Rear Tires"{"nodeOffset":{"x":-1.175, "y":-1.209, "z":0.075}}],
+		//mg is 145 74 R13
+		// 22.3" dia 4.5" width
+		//	0.565m dia  0.115m width
 		["tire_F_15x7_alt","tire_F_195_65_15_alt_sport", "Front Tires"{"nodeOffset":{"x":-1.175, "y":1.158, "z":0.075}}],
 
 		],
@@ -99,14 +102,14 @@
         //{"brakeVentingCoef":false},
 		
 		//FRONT
-		["FR", "wheel_FR", "tire_FR", "nl120", "nl117", 9999,  "nl138", -1, {"speedo":false}],
+		["FR", "wheel_FR", "tire_FR", "nl120", "nl117", 9999,  "nl138", -1, {"speedo":true}],
 		
-		["FL", "wheel_FL", "tire_FL", "nr122", "nr124", 9999,  "nr139", 1, {"speedo":false}],
+		["FL", "wheel_FL", "tire_FL", "nr122", "nr124", 9999,  "nr139", 1, {"speedo":true}],
 		 
 		 //REAR
-		["RR", "wheel_RR", "tire_RR", "nl36", "nl34", 9999,  "nl57", -1, {"speedo":true}],
+		["RR", "wheel_RR", "tire_RR", "nl36", "nl34", 9999,  "nl57", -1, {"speedo":false}],
 		
-		["RL", "wheel_RL", "tire_RL", "nr39", "nr41", 9999,  "nr58", 1, {"speedo":true}],	
+		["RL", "wheel_RL", "tire_RL", "nr39", "nr41", 9999,  "nr58", 1, {"speedo":false}],	
 		
 	],
 

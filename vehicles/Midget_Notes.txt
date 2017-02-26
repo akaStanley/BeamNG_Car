@@ -1,3 +1,8 @@
+
+Wishbone suspension like  3d chevron
+coil goes from underside of wheel well to bottom of middle upper chevron
+limiter goes from same start to wheel attach of bottom chevron
+
 //Wheel nodes
 // front right
 nl120

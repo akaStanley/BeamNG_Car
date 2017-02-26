@@ -79,8 +79,8 @@
         ["manualGearbox", 	"gearbox", 		"clutch", 1],
 		["shaft",			"driveshaft", 	"gearbox", 1]
 		["differential", "myDifferential", "driveshaft", 1, {"diffType":"open", "diffTorqueSplit":0.6, "gearRatio":3.0, "friction":15}]
-		["shaft",            "frontRight",      "myDifferential",        1,          {"connectedWheel":"FR"}]
-		["shaft",            "frontLeft",      "myDifferential",        2,          {"connectedWheel":"FL"}]
+		["shaft",            "frontRight",      "myDifferential",        1,          {"connectedWheel":"RR"}]
+		["shaft",            "frontLeft",      "myDifferential",        2,          {"connectedWheel":"RL"}]
     ],
 	
 
