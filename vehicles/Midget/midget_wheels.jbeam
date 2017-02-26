@@ -18,8 +18,8 @@
 	
 		"hydros": [
         ["id1:","id2:"],
-			["nr145","n137",{"factor":-0.4,"steeringWheelLock":550}],
-			["n137","nl144",{"factor":0.4,"steeringWheelLock":550}],			
+			["nr145","n137",{"factor":-0.3,"steeringWheelLock":460}],
+			["n137","nl144",{"factor":0.3,"steeringWheelLock":460}],			
 		]
 		//usually hydros go right afte the beams section
 		
@@ -170,13 +170,13 @@
 //--Beams--
 		"beams":[
 			["id1:", "id2:"],
-			
-			
-			{"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
-			//{"beamDeform":95000,"beamStrength":350000},
-			//{"beamSpring":8001000,"beamDamp":2},//200
-			{"beamSpring":5911000,"beamDamp":1575},
-			{"beamDeform":61000,"beamStrength":350000},
+		  //{"beamPrecompression":1.235, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.37},
+
+			{"beamPrecompression":1.235, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.37},
+			{"beamDeform":133750,"beamStrength":171250},
+			{"beamSpring":36000,"beamDamp":200},	//ORIGINAL {"beamSpring":36000,"beamDamp":0},
+			{"beamLimitSpring":101000,"beamLimitDamp":4000},
+
 			//Front left:
 			["nr127","nr129"],
 			//Front right:
@@ -191,18 +191,15 @@
 			["nl38","nl66"],
 			["nl38","nl11"],
 			
-			//{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.28, "beamShortBound":0.34},
-			//{"beamSpring":0,"beamDamp":0,"beamDeform":165000,"beamStrength":900000},
-			//{"beamLimitSpring":2501000,"beamLimitDamp":2000},
-			
-			{"beamLimitSpring":8001000,"beamLimitDamp":1200},
-			{"beamSpring":0,"beamDamp":0,"beamDeform":500000,"beamStrength":1000000},
-			{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.05, "beamShortBound":0.4},
+			// === Limiters ===
+			//{"beamLimitSpring":8001000,"beamLimitDamp":1200},
+			//{"beamSpring":0,"beamDamp":0,"beamDeform":500000,"beamStrength":1000000},
+			//{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.05, "beamShortBound":0.4},
 			
 			//front right limiter
-			["nl125","nl122"],			
+			//["nl125","nl122"],			
 			//front left limiter
-			["nr127","nr128"],
+			//["nr127","nr128"],
 			
 			],
 	}
