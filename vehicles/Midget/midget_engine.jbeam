@@ -1,8 +1,8 @@
 {
 "midget_engine": {
     "information":{
-        "authors":"BeamNG",
-        "name":"658cc I3 Gas Engine",
+        "authors":"akaStanley",
+        "name":"1.3L 1257cc A-Series Gas Engine",
         "value":350,
     }
     "slotType" : "midget_engine",
@@ -18,23 +18,25 @@
         "torque":[
             ["rpm", "torque"]
             [0, 0],
-            [500, 94],
-            [1000, 147],
-            [2000, 191],
-            [2700, 221],
-            [3300, 226],
-            [4000, 232],
-            [4500, 237],
-            [5000, 230],
-            [6000, 197],
-            [7000, 142],
-            [8000, 95],
+            [500, 17],
+            [1000, 40],
+			[1500, 66],
+            [2000, 87],
+            [2400, 100],
+            [2700, 106],
+            [3000, 107],
+            [3300, 107],
+            [3700, 106],
+            [4600, 100],
+            [5600, 91],
+            [6500, 79],
+
         ],
         "torqueReactionNodes:":["n137","n115","nl113"] 	//turns out these are required.
-        "idleRPM":650,
-        "maxRPM":4500,
+        "idleRPM":600,
+        "maxRPM":6000,
         "inertia":0.11,
-        "friction":9
+        "friction":4
         "dynamicFriction":0.018
         "burnEfficiency":0.3
         //"particulates":0.15
@@ -64,13 +66,13 @@
         //**highShiftDown can be overwritten by automatic transmissions**
         "highShiftDownRPM":[0,0,0,1600,2100,2300,2300]
         //**highShiftUp can be overwritten by intake modifications**
-        "highShiftUpRPM":4300
+        "highShiftUpRPM":4000
     },
 }
 "midget_transmission_3M": {
     "information":{
         "authors":"BeamNG",
-        "name":"3-Speed Manual Transmission",
+        "name":"4-Speed Manual Transmission",
     }
     "slotType" : "midget_transmission",
     "powertrain": [
@@ -78,20 +80,20 @@
         ["frictionClutch", 	"clutch", 		"mainEngine", 1],
         ["manualGearbox", 	"gearbox", 		"clutch", 1],
 		["shaft",			"driveshaft", 	"gearbox", 1]
-		["differential", "myDifferential", "driveshaft", 1, {"diffType":"open", "diffTorqueSplit":0.6, "gearRatio":3.0, "friction":15}]
+		["differential", "myDifferential", "driveshaft", 1, {"diffType":"lsd", "diffTorqueSplit":0.5, "gearRatio":3.0, "friction":15}]
 		["shaft",            "frontRight",      "myDifferential",        1,          {"connectedWheel":"RR"}]
 		["shaft",            "frontLeft",      "myDifferential",        2,          {"connectedWheel":"RL"}]
     ],
 	
 
     "gearbox": {
-        "gearRatios":[-2.9, 0, 2.72, 1.55, 1.05, 0.72]
+        "gearRatios":[-4.114, 0, 3.2, 1.916, 1.357, 1]
         "friction": 1,
     },
     "clutch": {},
     "vehicleController": {
         "lowShiftDownRPM":[0,0,0,1600,2100,2300,2300],
-        "lowShiftUpRPM":3500,
+        "lowShiftUpRPM":2500,
     },
 }
 }

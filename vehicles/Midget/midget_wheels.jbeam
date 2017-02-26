@@ -19,11 +19,17 @@
 		"hydros": [
         ["id1:","id2:"],
 		//left
-			["nr145","n137",{"factor":-0.2,"steeringWheelLock":400}],
-			["nr118","n115",{"factor":0.2,"steeringWheelLock":400}],
+			//["nr145","n137",{"factor":-0.2,"steeringWheelLock":400}],
+			//["nr118","n115",{"factor":0.2,"steeringWheelLock":400}],
+		  //new
+			["nr145","nr131",{"factor":-0.4,"steeringWheelLock":460}],
+			["nr118","nr131",{"factor":0.4,"steeringWheelLock":460}],
 		//right
-			["n137","nl144",{"factor":0.2,"steeringWheelLock":400}],	
-			["n115","nl112",{"factor":-0.2,"steeringWheelLock":400}],				
+			//["n137","nl144",{"factor":0.2,"steeringWheelLock":400}],	
+			//["n115","nl112",{"factor":-0.2,"steeringWheelLock":400}],	
+		  //new:
+			["nl121","nl144",{"factor":0.4,"steeringWheelLock":460}],	
+			["nl121","nl112",{"factor":-0.4,"steeringWheelLock":460}],	
 		]
 		//usually hydros go right afte the beams section
 		
@@ -93,7 +99,7 @@
         {"dragCoef":10},
 		
 		
-		{"brakeTorque":600},
+		{"brakeTorque":450},
         {"parkingTorque":0},
         {"enableBrakeThermals":false},
         {"brakeDiameter":false},
@@ -175,10 +181,15 @@
 		"beams":[
 			["id1:", "id2:"],
 		  //{"beamPrecompression":1.235, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.37},
-
+			//back of front
+			["nl112","nr118"],
+			//front
+			["nl144","nr145"],
+			
+			
 			{"beamPrecompression":1.235, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.37},
 			{"beamDeform":133750,"beamStrength":171250},
-			{"beamSpring":36000,"beamDamp":200},	//ORIGINAL {"beamSpring":36000,"beamDamp":0},
+			{"beamSpring":36000,"beamDamp":150},
 			{"beamLimitSpring":101000,"beamLimitDamp":4000},
 
 			//Front left:
@@ -187,7 +198,9 @@
 			["nl125","nl123"],
 			
 			
-			{"beamSpring":10000,"beamDamp":200},
+			{"beamSpring":40000,"beamDamp":150},
+			{"beamPrecompression":1.15, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.7},
+
 			//rear left:
 			["nr41","nr12"],
 			["nr41","nr67"],
@@ -195,7 +208,8 @@
 			//rear right:
 			["nl38","nl66"],
 			["nl38","nl11"],
-			
+						
+
 			// === Limiters ===
 			{"beamLimitSpring":8001000,"beamLimitDamp":1200},
 			{"beamSpring":0,"beamDamp":0,"beamDeform":500000,"beamStrength":1000000},
@@ -206,6 +220,7 @@
 			//front left limiter
 			["nr127","nr128"],
 			
+						
 			],
 	}
 }

@@ -48,7 +48,7 @@
 //--Nodes--
 		"nodes":[
 			["id", "posX", "posY", "posZ"],
-		{"nodeWeight":6},
+		{"nodeWeight":4},
 		{"frictionCoef":0.7},
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
@@ -204,6 +204,8 @@
 //--Beams--
 		"beams":[
 		["id1:", "id2:"],
+		{"beamSpring":990600.1,"beamDamp":132},
+          {"beamDeform":28300,"beamStrength":"FLT_MAX"},
 			["n2","n5"],
 			["n2","nl3"],
 			["n2","nr4"],
@@ -399,9 +401,7 @@
 			["nl36","nl39"],
 			["nl36","nl49"],
 			["nl37","nl38"],
-			["nl39","nl23"],
 			["nl39","nl38"],
-			["nl39","nl54"],
 			["nl44","nl27"],
 			["nl44","nl28"],
 			["nl44","nl29"],
@@ -789,9 +789,7 @@
 			["nr35","nr42"],
 			["nr40","nr41"],
 			["nr42","nr12"],
-			["nr42","nr26"],
 			["nr42","nr41"],
-			["nr42","nr58"],
 			["nr43","nr35"],
 			["nr43","nr40"],
 			["nr43","nr41"],
@@ -1033,10 +1031,25 @@
 			["nl98","nr101"],
 			
 			//rear wheel stabilizer bottom:
-			["nl22","nl37"],
-			["nl37","nl53"],
-			["nr40","nr57"],
-			["nr40","nr25"],
+			//["nl22","nl37"],
+			//["nl37","nl53"],
+			//["nr40","nr57"],
+			//["nr40","nr25"],
+			//
+			//["nr42","nr57"],
+			//["nr42","nr25"],
+			//["nl39","nl22"],
+			//["nl39","nl53"],
+			["nr42","nl39"],
+			["nr42","nl37"],
+			["nr40","nl37"],
+			["nr40","nl39"],
+			//top old:
+			//["nl39","nl54"],	//right
+			//["nl39","nl23"],
+			//["nr42","nr26"],	//left
+			//["nr42","nr58"],			
+
 		],
 	}
 }
