@@ -19,28 +19,28 @@
 		"hydros": [
         ["id1:","id2:"],
 		//left
-			//["nr145","n137",{"factor":-0.2,"steeringWheelLock":400}],
-			//["nr118","n115",{"factor":0.2,"steeringWheelLock":400}],
+			//["d145","n137",{"factor":-0.2,"steeringWheelLock":400}],
+			//["d118","n115",{"factor":0.2,"steeringWheelLock":400}],
 		  //new
-			["nr145","nr131",{"factor":-0.4,"steeringWheelLock":460}],
-			["nr118","nr131",{"factor":0.4,"steeringWheelLock":460}],
+			["d145","d131",{"factor":-0.3,"steeringWheelLock":460}],
+			["d118","d131",{"factor":0.3,"steeringWheelLock":460}],
 		//right
-			//["n137","nl144",{"factor":0.2,"steeringWheelLock":400}],	
-			//["n115","nl112",{"factor":-0.2,"steeringWheelLock":400}],	
+			//["n137","p144",{"factor":0.2,"steeringWheelLock":400}],	
+			//["n115","p112",{"factor":-0.2,"steeringWheelLock":400}],	
 		  //new:
-			["nl121","nl144",{"factor":0.4,"steeringWheelLock":460}],	
-			["nl121","nl112",{"factor":-0.4,"steeringWheelLock":460}],	
+			["p121","p144",{"factor":0.3,"steeringWheelLock":460}],	
+			["p121","p112",{"factor":-0.3,"steeringWheelLock":460}],	
 		]
 		//usually hydros go right afte the beams section
 		
 		"rails": {
-			"SteeringArm":{"links:":["nr145", "n137", "nl144"], "looped":false, "capped":true}
+			"SteeringArm":{"links:":["d145", "n137", "p144"], "looped":false, "capped":true}
 		},
 		
 		"slidenodes": [
 			["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
-			//["nl134", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front right
-			//["nr139", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front left
+			//["p134", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front right
+			//["d139", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front left
 		],
 	
 	"pressureWheels": [
@@ -109,14 +109,14 @@
         {"brakeVentingCoef":false},
 		
 		//FRONT
-		["FR", "wheel_FR", "tire_FR", "nl123", "nl121", 9999,  "nl112", -1, {"speedo":true}],
+		["FR", "wheel_FR", "tire_FR", "p123", "p121", 9999,  "p112", -1, {"speedo":true}],
 		
-		["FL", "wheel_FL", "tire_FL", "nr129", "nr131", 9999,  "nr118", 1, {"speedo":true}],
+		["FL", "wheel_FL", "tire_FL", "d129", "d131", 9999,  "d118", 1, {"speedo":true}],
 		 
 		 //REAR
-		["RR", "wheel_RR", "tire_RR", "nl38", "nl36", 9999,  "nl49", -1, {"speedo":false}],
+		["RR", "wheel_RR", "tire_RR", "p38", "p36", 9999,  "p49", -1, {"speedo":false}],
 		
-		["RL", "wheel_RL", "tire_RL", "nr41", "nr43", 9999,  "nr50", 1, {"speedo":false}],	
+		["RL", "wheel_RL", "tire_RL", "d41", "d43", 9999,  "d50", 1, {"speedo":false}],	
 		
 	],
 
@@ -140,40 +140,40 @@
 		
 			{"collision":false},
 			{"group":["wheel_FR","tire_FR"]},
-			["nl121",0.725,1.158,0.0],		//outer center hub
-			["nl123",0.615,1.158,0.0],	//inner center
+			["p121",0.725,1.158,0.0],		//outer center hub
+			["p123",0.615,1.158,0.0],	//inner center
 			{"group":""}, //closing group
-			["nl122",0.615,1.158,-0.114],
-			["nl124",0.615,1.158,0.148],
-			["nl112",0.615,0.997,0.0],
-			["nl144",0.615,1.373,0.0],
+			["p122",0.615,1.158,-0.114],
+			["p124",0.615,1.158,0.148],
+			["p112",0.615,0.997,0.0],
+			["p144",0.615,1.373,0.0],
 			
 			{"group":["wheel_FL","tire_FL"]},
-			["nr131",-0.725,1.158,0.0],		//outer center hub
-			["nr129",-0.615,1.158,0.0],	//inner center
+			["d131",-0.725,1.158,0.0],		//outer center hub
+			["d129",-0.615,1.158,0.0],	//inner center
 			{"group":""}, //closing group
-			["nr128",-0.615,1.158,-0.114],
-			["nr130",-0.615,1.158,0.148],
-			["nr118",-0.615,0.997,0.0],
-			["nr145",-0.615,1.373,0.0],
+			["d128",-0.615,1.158,-0.114],
+			["d130",-0.615,1.158,0.148],
+			["d118",-0.615,0.997,0.0],
+			["d145",-0.615,1.373,0.0],
 			
 			{"group":["wheel_RR","tire_RR"]},
-			["nl36",0.725,-1.209,0.0],		//outer center hub
-			["nl38",0.615,-1.209,0.0],	//inner center
+			["p36",0.725,-1.209,0.0],		//outer center hub
+			["p38",0.615,-1.209,0.0],	//inner center
 			{"group":""}, //closing group
-			["nl37",0.615,-1.209,-0.13],
-			["nl39",0.615,-1.209,0.122],
-			["nl34",0.615,-1.359,0.0],
-			["nl49",0.615,-1.065,0.0],
+			["p37",0.615,-1.209,-0.13],
+			["p39",0.615,-1.209,0.122],
+			["p34",0.615,-1.359,0.0],
+			["p49",0.615,-1.065,0.0],
 
 			{"group":["wheel_RL","tire_RL"]},
-			["nr43",-0.725,-1.209,0.0],		//outer center hub
-			["nr41",-0.615,-1.209,0.0],	//inner center
+			["d43",-0.725,-1.209,0.0],		//outer center hub
+			["d41",-0.615,-1.209,0.0],	//inner center
 			{"group":""}, //closing group
-			["nr40",-0.615,-1.209,-0.13],
-			["nr42",-0.615,-1.209,0.122],
-			["nr35",-0.615,-1.359,0.0],
-			["nr50",-0.615,-1.065,0.0],
+			["d40",-0.615,-1.209,-0.13],
+			["d42",-0.615,-1.209,0.122],
+			["d35",-0.615,-1.359,0.0],
+			["d50",-0.615,-1.065,0.0],
 			
 			],
 			
@@ -182,32 +182,33 @@
 			["id1:", "id2:"],
 		  //{"beamPrecompression":1.235, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.37},
 			//back of front
-			["nl112","nr118"],
+			["p112","d118"],
 			//front
-			["nl144","nr145"],
+			["p144","d145"],
 			
 			
-			{"beamPrecompression":1.235, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.37},
+			{"beamPrecompression":1.235, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.5},
 			{"beamDeform":133750,"beamStrength":171250},
-			{"beamSpring":36000,"beamDamp":150},
+			{"beamSpring":50000,"beamDamp":3000},
 			{"beamLimitSpring":101000,"beamLimitDamp":4000},
 
 			//Front left:
-			["nr127","nr129"],
+			["d127","d129"],
 			//Front right:
-			["nl125","nl123"],
+			["p125","p123"],
 			
 			
-			{"beamSpring":40000,"beamDamp":150},
-			{"beamPrecompression":1.15, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.7},
+			{"beamSpring":100000,"beamDamp":5000}, //Beamspring=stiffness big#=NO spring. //large damp# overdamping
+			{"beamLimitSpring":501000,"beamLimitDamp":4000},
+			{"beamPrecompression":1.1, "beamType":"|BOUNDED", "beamLongBound":0.05, "beamShortBound":0.05},
 
 			//rear left:
-			["nr41","nr12"],
-			["nr41","nr67"],
+			["d41","d12"],
+			["d41","d67"],
 			
 			//rear right:
-			["nl38","nl66"],
-			["nl38","nl11"],
+			["p38","p66"],
+			["p38","p11"],
 						
 
 			// === Limiters ===
@@ -216,9 +217,9 @@
 			{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.05, "beamShortBound":0.4},
 			
 			//front right limiter
-			["nl125","nl122"],			
+			//["p125","p122"],			
 			//front left limiter
-			["nr127","nr128"],
+			//["d127","d128"],
 			
 						
 			],
