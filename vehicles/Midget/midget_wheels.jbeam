@@ -18,29 +18,35 @@
 	
 		"hydros": [
         ["id1:","id2:"],
-		//left
-			//["d145","n137",{"factor":-0.2,"steeringWheelLock":400}],
-			//["d118","n115",{"factor":0.2,"steeringWheelLock":400}],
-		  //new
-			["d145","d131",{"factor":-0.3,"steeringWheelLock":460}],
-			["d118","d131",{"factor":0.3,"steeringWheelLock":460}],
 		//right
 			//["n137","p144",{"factor":0.2,"steeringWheelLock":400}],	
 			//["n115","p112",{"factor":-0.2,"steeringWheelLock":400}],	
 		  //new:
-			["p121","p144",{"factor":0.3,"steeringWheelLock":460}],	
-			["p121","p112",{"factor":-0.3,"steeringWheelLock":460}],	
+			//["p121","p144",{"factor":0.26,"steeringWheelLock":460}],	
+			//["p121","p112",{"factor":-0.26,"steeringWheelLock":460}],	
+		  //thebest
+			["d116","sp",{"factor":-0.3,"steeringWheelLock":460}],	
+			
+		//left
+			//["d145","n137",{"factor":-0.2,"steeringWheelLock":400}],
+			//["d118","n115",{"factor":0.2,"steeringWheelLock":400}],
+		  //new
+			//["d145","d131",{"factor":-0.26,"steeringWheelLock":460}],
+			//["d118","d131",{"factor":0.26,"steeringWheelLock":460}],
+		  //thebest
+			["p113","sd",{"factor":0.3,"steeringWheelLock":460}],			
+
 		]
 		//usually hydros go right afte the beams section
 		
 		"rails": {
-			"SteeringArm":{"links:":["d145", "n137", "p144"], "looped":false, "capped":true}
+			"SteeringArm":{"links:":["d116", "n115", "p113"], "looped":false, "capped":true}
 		},
 		
 		"slidenodes": [
 			["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
-			//["p134", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front right
-			//["d139", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front left
+			["sd", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front right
+			["sp", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front left
 		],
 	
 	"pressureWheels": [
@@ -180,16 +186,19 @@
 //--Beams--
 		"beams":[
 			["id1:", "id2:"],
+			//steering linkage beams:
+			["sd","d118"],
+			["sp","p112"],
 		  //{"beamPrecompression":1.235, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.37},
 			//back of front
-			["p112","d118"],
+			//["p112","d118"],
 			//front
-			["p144","d145"],
+			//["p144","d145"],
 			
 			
 			{"beamPrecompression":1.235, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.5},
 			{"beamDeform":133750,"beamStrength":171250},
-			{"beamSpring":50000,"beamDamp":3000},
+			{"beamSpring":45000,"beamDamp":3000},
 			{"beamLimitSpring":101000,"beamLimitDamp":4000},
 
 			//Front left:
@@ -212,9 +221,9 @@
 						
 
 			// === Limiters ===
-			{"beamLimitSpring":8001000,"beamLimitDamp":1200},
-			{"beamSpring":0,"beamDamp":0,"beamDeform":500000,"beamStrength":1000000},
-			{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.05, "beamShortBound":0.4},
+			//{"beamLimitSpring":8001000,"beamLimitDamp":1200},
+			//{"beamSpring":0,"beamDamp":0,"beamDeform":500000,"beamStrength":1000000},
+			//{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.05, "beamShortBound":0.4},
 			
 			//front right limiter
 			//["p125","p122"],			
