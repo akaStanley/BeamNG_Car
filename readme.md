@@ -2,6 +2,8 @@
 Car in BeamNG 1/29/16
 https://en.wikipedia.org/wiki/MG_Midget
 
+![A recent progress picture.](Pictures/Progress Pics/Header.png)
+
 ##Notes:
 Notepad ++:
 Find: & or $ (end of line)
