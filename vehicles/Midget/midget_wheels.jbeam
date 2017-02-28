@@ -106,7 +106,7 @@
 		
 		
 		{"brakeTorque":450},
-        {"parkingTorque":0},
+        {"parkingTorque":700},
         {"enableBrakeThermals":false},
         {"brakeDiameter":false},
         {"brakeMass":false},
@@ -207,8 +207,8 @@
 			["p125","p123"],
 			
 			
-			{"beamSpring":100000,"beamDamp":5000}, //Beamspring=stiffness big#=NO spring. //large damp# overdamping
-			{"beamLimitSpring":501000,"beamLimitDamp":4000},
+			{"beamSpring":50000,"beamDamp":5000}, //Beamspring=stiffness big#=NO spring. //large damp# overdamping
+			{"beamLimitSpring":1001000,"beamLimitDamp":4000},
 			{"beamPrecompression":1.1, "beamType":"|BOUNDED", "beamLongBound":0.05, "beamShortBound":0.05},
 
 			//rear left:
