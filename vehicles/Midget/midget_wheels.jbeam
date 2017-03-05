@@ -9,6 +9,7 @@
 		"slots": [
 		["type", "default", "description"]
 		["tire_R_15x7_alt","tire_R_195_65_15_alt_sport", "Rear Tires"{"nodeOffset":{"x":-1.175, "y":-1.209, "z":0.0}}],
+		
 		//mg is 145 74 R13
 		// 22.3" dia 4.5" width
 		//	0.565m dia  0.115m width
