@@ -8,15 +8,16 @@
 		
 		"slots": [
 		["type", "default", "description"]
-		["tire_R_15x7_alt","tire_R_195_65_15_alt_sport", "Rear Tires"{"nodeOffset":{"x":-1.175, "y":-1.209, "z":0.0}}],
+		//["tire_R_13x5","tire_01a_13x5_23", "Rear Tires"{"nodeOffset":{"x":-1.175, "y":-1.209, "z":0.0}}],
 		
 		//mg is 145 74 R13
 		// 22.3" dia 4.5" width
 		//	0.565m dia  0.115m width
-		["tire_F_15x7_alt","tire_F_195_65_15_alt_sport", "Front Tires"{"nodeOffset":{"x":-1.175, "y":1.158, "z":0.0}}],
+		//["tire_F_13x5","tire_01a_13x5_23", "Front Tires"{"nodeOffset":{"x":-1.175, "y":1.158, "z":0.0}}],
 
 		],
-	
+
+        
 		"hydros": [
         ["id1:","id2:"],
 		//right
@@ -52,6 +53,7 @@
 	
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+		
 		{"disableMeshBreaking":true},
 		{"disableHubMeshBreaking":false},
 		{"enableHubcaps":false},
@@ -131,11 +133,17 @@
 		//https://www.beamng.com/threads/possible-to-take-wheels-from-one-vehicle-to-put-on-another.30048/
 			["mesh", "[group]:", "nonFlexMaterials"],		
 			
-			["rim", ["wheel_FR"], [], {"pos":{"x":0.67, "y":1.158, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
-			["rim", ["wheel_FL"], [], {"pos":{"x":-0.67, "y":1.158, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
-			["rim", ["wheel_RR"], [], {"pos":{"x":0.67, "y":-1.209, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
-			["rim", ["wheel_RL"], [], {"pos":{"x":-0.67, "y":-1.209, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
-	
+			["rim", ["wheel_FR"], [], {"pos":{"x":0.68, "y":1.158, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.85, "y":0.85, "z":0.85}}],
+			["rim", ["wheel_FL"], [], {"pos":{"x":-0.68, "y":1.158, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.85, "y":0.85, "z":0.85}}],
+			["rim", ["wheel_RR"], [], {"pos":{"x":0.68, "y":-1.209, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.85, "y":0.85, "z":0.85}}],
+			["rim", ["wheel_RL"], [], {"pos":{"x":-0.68, "y":-1.209, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.85, "y":0.85, "z":0.85}}],
+			
+	//stock tires from game library
+        ["tire_01a_13x5_23",    ["tire_FR"], [], {"pos":{"x":0.67, "y":1.158, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.8, "y":1, "z":1}}],
+        ["tire_01a_13x5_23",    ["tire_FL"], [], {"pos":{"x":-0.67, "y":1.158, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.8, "y":1, "z":1}}],
+		["tire_01a_13x5_23",    ["tire_RR"], [], {"pos":{"x":0.67, "y":-1.209, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.8, "y":1, "z":1}}],
+		["tire_01a_13x5_23",    ["tire_RL"], [], {"pos":{"x":-0.67, "y":-1.209, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.8, "y":1, "z":1}}],
+		
 	//old wheels		
 			//	["wheel_03a_15x7", ["wheel_FR"], [], {"pos":{"x":0.6585, "y":1.158, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
 			//["wheel_03a_15x7", ["wheel_FL"], [], {"pos":{"x":-0.6585, "y":1.158, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
