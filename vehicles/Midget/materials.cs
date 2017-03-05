@@ -1,8 +1,8 @@
 singleton Material(midget_material1)
 {
    mapTo = "material1";	//the name of the material in blender
-   diffuseMap[0] = "AO_bake.dds";
-   specularPower[0] = "15";
+   diffuseMap[0] = "Body_AO.dds";
+   specularPower[0] = "200";
    useAnisotropic[0] = "1";
    castShadows = "1";
    translucent = "0";
@@ -26,8 +26,8 @@ singleton Material(midget_Rim)
 {
    mapTo = "crome";	//the name of the material in blender
     diffuseMap[0] = "Wheel.dds";
-	//specularMap[0] = "Wheel_Reflect.dds";
+	specularMap[0] = "Wheel_Reflect.dds";
 	//normalMap[0] = "Wheel_Normals.dds";
-   specularPower[0] = "16";
+   specularPower[0] = "500";
    translucentBlendOp = "none";
 };
