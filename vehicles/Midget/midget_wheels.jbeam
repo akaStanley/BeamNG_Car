@@ -224,9 +224,9 @@
 			["p125","p123"],
 			
 			
-			{"beamSpring":90000,"beamDamp":5000}, //Beamspring=stiffness big#=NO spring. //large damp# overdamping
+			{"beamSpring":100000,"beamDamp":5000}, //Beamspring=stiffness big#=NO spring. //large damp# overdamping
 			{"beamLimitSpring":100000,"beamLimitDamp":7000},
-			{"beamPrecompression":1.1, "beamType":"|BOUNDED", "beamLongBound":0.1, "beamShortBound":0.5},
+			{"beamPrecompression":1.07, "beamType":"|BOUNDED", "beamLongBound":0.1, "beamShortBound":0.5},
 
 			//rear left:
 			["d41","d12"],
