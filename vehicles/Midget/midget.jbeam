@@ -43,6 +43,14 @@
 			["mesh", "[group]:", "nonFlexMaterials"],
 			["body", ["MG_Body_group"]],
 			["window_frame", ["window_group"]],
+			
+			["walls", ["MG_Body_group"]], //temp
+			["floor", ["MG_Body_group"]], 	//temp
+			["wheel_wells", ["MG_Body_group"]],	//temp
+			["door_cards", ["MG_Body_group"]],	//temp
+			["stonechip_sides", ["MG_Body_group"]],	//temp
+			["tonneau_cover", ["MG_Body_group"]],	//temp
+
 		 ], //closing flexbody section
 										 
 //--Nodes--
@@ -207,6 +215,11 @@
 			//right
 			["p11",0.615,-1.603,0.12],
 			["p66",0.615,-0.812,0.12],
+			
+			// added for swaybar
+			["psw",0.388,1.506,0.05],
+			["dsw",-0.388,1.506,0.05],
+			
 			],
 			
 //--Beams--
@@ -1028,6 +1041,14 @@
 			
 			//ones I added:
 			
+			// wheel well front
+			["d143","d140"],
+			["d111","d117"],
+			["d153","d150"],
+			["p110","p114"],
+			["p132","p135"],
+			["p152","p148"],
+			
 			//window
 			["d82","d95"],
 			["p81","p91"],
@@ -1049,6 +1070,7 @@
 			["p34","d50"],
 			["d35","p34"],
 			["p49","d50"],
+			
 			// Swaybar
 			["p147","d149"],
 
@@ -1057,6 +1079,17 @@
 
 			["p147","p123"],
 			["p123","d149"],
+			
+			["dsw","p147"],
+			["dsw","d149"],
+			["dsw","d129"],
+			["dsw","p123"],
+			["dsw","psw"],
+			["psw","p147"],
+			["psw","d149"],
+			["psw","d129"],
+			["psw","p123"],
+
 			
 		],
 	}

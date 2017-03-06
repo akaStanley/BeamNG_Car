@@ -143,13 +143,7 @@
         ["tire_01a_13x5_23",    ["tire_FL"], [], {"pos":{"x":-0.67, "y":1.158, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.8, "y":1, "z":1}}],
 		["tire_01a_13x5_23",    ["tire_RR"], [], {"pos":{"x":0.67, "y":-1.209, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.8, "y":1, "z":1}}],
 		["tire_01a_13x5_23",    ["tire_RL"], [], {"pos":{"x":-0.67, "y":-1.209, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.8, "y":1, "z":1}}],
-		
-	//old wheels		
-			//	["wheel_03a_15x7", ["wheel_FR"], [], {"pos":{"x":0.6585, "y":1.158, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
-			//["wheel_03a_15x7", ["wheel_FL"], [], {"pos":{"x":-0.6585, "y":1.158, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
-			//["wheel_03a_15x7", ["wheel_RR"], [], {"pos":{"x":0.6585, "y":-1.209, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
-			//["wheel_03a_15x7", ["wheel_RL"], [], {"pos":{"x":-0.6585, "y":-1.209, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
-			
+
 		 ], //closing flexbody section
 										 
 //--Nodes--
@@ -167,8 +161,8 @@
 			{"group":""}, //closing group
 			["p122",0.615,1.158,-0.114],
 			["p124",0.615,1.158,0.148],
-			["p112",0.615,0.997,0.0],
-			["p144",0.615,1.373,0.0],
+			["p112",0.615,0.997,0.025], //steering attach
+			["p144",0.615,1.34,0.0],
 			
 			{"group":["wheel_FL","tire_FL"]},
 			["d131",-0.725,1.158,0.0],		//outer center hub
@@ -176,8 +170,8 @@
 			{"group":""}, //closing group
 			["d128",-0.615,1.158,-0.114],
 			["d130",-0.615,1.158,0.148],
-			["d118",-0.615,0.997,0.0],
-			["d145",-0.615,1.373,0.0],
+			["d118",-0.615,0.997,0.025],	//steering attach
+			["d145",-0.615,1.34,0.0],
 			
 			{"group":["wheel_RR","tire_RR"]},
 			["p36",0.725,-1.209,0.0],		//outer center hub
@@ -205,6 +199,13 @@
 			//steering linkage beams:
 			["sd","d118"],
 			["sp","p112"],
+			//testing:
+			//["d130","p124"],
+			//["d128","p122"],
+			//["p122","d130"],
+			//["p124","d128"],
+			
+			
 		  //{"beamPrecompression":1.235, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.37},
 			//back of front
 			//["p112","d118"],
@@ -213,9 +214,9 @@
 			
 			
 			{"beamPrecompression":1.235, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.5},
-			{"beamDeform":133750,"beamStrength":171250},
-			{"beamSpring":45000,"beamDamp":3000},
-			{"beamLimitSpring":101000,"beamLimitDamp":4000},
+			{"beamDeform":75000,"beamStrength":360000},
+			{"beamSpring":5000,"beamDamp":3000},
+			{"beamLimitSpring":101000,"beamLimitDamp":7000},
 
 			//Front left:
 			["d127","d129"],
@@ -223,9 +224,9 @@
 			["p125","p123"],
 			
 			
-			{"beamSpring":50000,"beamDamp":5000}, //Beamspring=stiffness big#=NO spring. //large damp# overdamping
-			{"beamLimitSpring":1001000,"beamLimitDamp":4000},
-			{"beamPrecompression":1.1, "beamType":"|BOUNDED", "beamLongBound":0.05, "beamShortBound":0.05},
+			{"beamSpring":90000,"beamDamp":5000}, //Beamspring=stiffness big#=NO spring. //large damp# overdamping
+			{"beamLimitSpring":100000,"beamLimitDamp":7000},
+			{"beamPrecompression":1.1, "beamType":"|BOUNDED", "beamLongBound":0.1, "beamShortBound":0.5},
 
 			//rear left:
 			["d41","d12"],
