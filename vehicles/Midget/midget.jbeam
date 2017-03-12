@@ -188,9 +188,9 @@
 			["d157",-0.739,1.689,0.0],
 			["d160",-0.388,1.697,0.0],
 			["d161",-0.388,1.697,0.352],
-			{"group":""}, //closing group for the mg body flexbody
+		{"group":""}, //closing group for the mg body flexbody
 			
-			{"group":"window_group"},
+		{"group":"window_group"},
 			["n85",0.0,-0.131,0.958],
 			["d86",-0.388,-0.131,0.958],
 			["d87",-0.587,-0.131,0.95],
@@ -201,7 +201,7 @@
 			["d82",-0.735,-0.134,0.56], //bottom driver side
 			["p81",0.735,-0.134,0.56],	//bottom passenger side
 
-			{"group":""}, //closing group
+		{"group":""}, //closing group
 			
 			//rear suspension:
 			//left
@@ -222,6 +222,10 @@
 		["id1:", "id2:"],
 		{"beamSpring":990600.1,"beamDamp":132},
           {"beamDeform":28300,"beamStrength":"FLT_MAX"},
+		  
+		  // Seperate out the body panels and make them correct strength
+		  // make frame and engine weigh correct 
+		  // add cosmetic parts/ bumpers/lights
 			["n2","n5"],
 			["n2","p3"],
 			["n2","d4"],

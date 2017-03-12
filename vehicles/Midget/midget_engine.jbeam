@@ -31,8 +31,9 @@
             [5600, 91],
             [6500, 79],
 
-        ],
-        "torqueReactionNodes:":["n137","n115","p113"] 	//turns out these are required.
+        ],		
+		//["ref:", "back:", "left:", "up:"]
+        "torqueReactionNodes:":["n138","n137","n115"] 	//turns out these are required.
         "idleRPM":600,
         "maxRPM":6000,
         "inertia":0.11,
@@ -68,6 +69,77 @@
         //**highShiftUp can be overwritten by intake modifications**
         "highShiftUpRPM":4000
     },
+	
+	"nodes":[
+			["id", "posX", "posY", "posZ"],
+		{"nodeWeight":14.4}, //in kg 115/8
+		{"frictionCoef":0.7},
+		{"nodeMaterial":"|NM_METAL"},
+		{"selfCollision":true},
+		//engine wieghs 253lb = 115Kg
+			["e1",0.2000,1.506,0.01],
+			["e2",-0.200,1.506,0.01],
+			["e3",0.200,1.050,0.01],
+			["e4",-0.200,1.050,0.01],
+			
+			["e5",0.2000,1.506,0.27],
+			["e6",-0.200,1.506,0.27],
+			["e7",0.200,1.050,0.27],
+			["e8",-0.200,1.050,0.27],
+		],
+		
+		"beams":[
+			["id1:", "id2:"],
+          {"beamDeform":28300,"beamStrength":"FLT_MAX"},
+		{"group":"engine"},
+		{"engineGroup":"engine_block"},
+		 ["e1","e2"],
+		 ["e2","e3"],
+		 ["e3","e4"],
+		 ["e2","e4"],
+		 ["e1","e3"],
+		 ["e5","e7"],
+		 ["e6","e8"],
+		 ["e5","e6"],
+		 ["e6","e7"],
+		 ["e7","e8"],
+
+		 ["e1","e5"],
+		 ["e2","e6"],
+		 ["e3","e7"],
+		 ["e4","e8"],
+ 
+		 ["e6","e3"],
+		 ["e5","e4"],
+		 ["e7","e2"],
+		 ["e8","e1"],
+		 
+		 ["e1","e6"],
+		 ["e2","e5"],
+		 ["e7","e4"],
+		 ["e3","e8"],
+		 ["e1","e7"],
+		 ["e3","e5"],
+		 ["e2","e8"],
+		 ["e6","e4"],
+	    {"engineGroup":""}, //closing group
+		{"group":""},
+		 
+		 ["p147","e5"],
+		 ["p147","e1"],
+		 ["d149","e6"],
+		 ["d149","e2"],
+		 ["d107","e8"],
+		 ["p103","e7"],
+		 ["d149","e5"],
+		 ["p147","e6"],
+		 ["p103","e8"],
+		 ["d107","e7"],
+		 ["p103","e6"],
+		 ["d017","e1"],
+		 ["d149","e7"],
+		 ["p147","e8"],
+		  ],
 }
 "midget_transmission_3M": {
     "information":{

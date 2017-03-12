@@ -77,3 +77,8 @@ rear right:
 			["nr41","nr12"],
 			["nr41","nr67"],
 		
+		
+		0.48 sp
+-0.615
+
+steering arm 0.868 long
