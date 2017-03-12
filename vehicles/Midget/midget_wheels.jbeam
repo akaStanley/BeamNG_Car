@@ -20,35 +20,31 @@
         
 		"hydros": [
         ["id1:","id2:"],
-		//right
-			//["n137","p144",{"factor":0.2,"steeringWheelLock":400}],	
-			//["n115","p112",{"factor":-0.2,"steeringWheelLock":400}],	
-		  //new:
-			//["p121","p144",{"factor":0.26,"steeringWheelLock":460}],	
-			//["p121","p112",{"factor":-0.26,"steeringWheelLock":460}],	
-		  //thebest
-			["d116","sp",{"factor":-0.3,"steeringWheelLock":460}],	
-			
-		//left
-			//["d145","n137",{"factor":-0.2,"steeringWheelLock":400}],
-			//["d118","n115",{"factor":0.2,"steeringWheelLock":400}],
-		  //new
-			//["d145","d131",{"factor":-0.26,"steeringWheelLock":460}],
-			//["d118","d131",{"factor":0.26,"steeringWheelLock":460}],
-		  //thebest
-			["p113","sd",{"factor":0.3,"steeringWheelLock":460}],			
+		  //Left (Driver)
+			["d116","sp",{"factor":-0.2,"steeringWheelLock":460}],	
+		  //Right (Passenger)
+			["p113","sd",{"factor":0.2,"steeringWheelLock":460}],			
 
 		]
 		//usually hydros go right afte the beams section
 		
 		"rails": {
-			"SteeringArm":{"links:":["d116", "n115", "p113"], "looped":false, "capped":true}
+			"SteeringArm":{"links:":["sp", "sd"], "looped":false, "capped":true}
+			//"Dupright":{"links:":["spD", "spDb"], "looped":false, "capped":false}
+			//"Pupright":{"links:":["spP", "spPb"], "looped":false, "capped":false}
+
 		},
 		
 		"slidenodes": [
 			["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
-			["sd", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front right
-			["sp", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front left
+			["sd1", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front right
+			["sp1", "SteeringArm", true, true, 0.0, 16001000, 500000, 500000], //front left
+			
+			//["d128", "Dupright", true, true, 0.0, 16001000, 500000, 500000],
+			//["d130", "Dupright", true, true, 0.0, 16001000, 500000, 500000],
+			
+			//["p124", "Pupright", true, true, 0.0, 16001000, 500000, 500000],
+			//["p122", "Pupright", true, true, 0.0, 16001000, 500000, 500000],
 		],
 	
 	"pressureWheels": [
@@ -191,11 +187,93 @@
 			["d35",-0.615,-1.359,0.0],
 			["d50",-0.615,-1.065,0.0],
 			
+			//suspension top arm support (for spring)
+			["spD",-0.615,1.158,0.31],
+			["spP",0.615,1.158,0.31],
+			
+			//suspension bottom arm support
+			//["spDb",-0.615,1.158,-0.22],
+			//["spPb",0.615,1.158,-0.22],
+			
+			//added for steering:
+			["sd1",-0.200,0.997,0.0],
+			["sp1",0.200,0.997,0.0],
+			
+			["sd",-0.480,0.997,0.0],
+			["sp",0.480,0.997,0.0],
+			
+			
 			],
 			
 //--Beams--
 		"beams":[
 			["id1:", "id2:"],
+			
+			//["spDb","d139"],
+			//["spDb","d116"],
+			//["spDb","spD"],
+			//["spPb","p134"],
+			//["spPb","p113"],
+			//["spPb","spP"],
+			
+			//steeting arm support:
+			["sd1","d116"],
+			["sd1","n115"],
+			["sd1","d107"],
+			["sd1","n105"],
+			["sd1","d117"],
+			["sd1","p114"],
+			
+			["sp1","p113"],
+			["sp1","n115"],
+			["sp1","p103"],
+			["sp1","n105"],
+			["sp1","p114"],
+			["sp1","d117"],
+			//suspension supports:
+			["spD","d140"],
+			["spD","d117"],
+			["spD","d139"],
+			["spD","d116"],
+
+			["spP","p114"],
+			["spP","p135"],
+			["spP","p113"],
+			["spP","p132"],
+			
+			//rear wheel stabilizer
+			["d42","p39"],
+			["d42","p37"],
+			["d40","p37"],
+			["d40","p39"],		
+			
+			//rear axle:
+			["d35","p49"],
+			["p34","d50"],
+			["d35","p34"],
+			["p49","d50"],
+			
+			// Swaybar
+			["p147","d149"],
+
+			["d149","d129"],
+			["d129","p147"],
+
+			["p147","p123"],
+			["p123","d149"],
+			
+			["dsw","p147"],
+			["dsw","d149"],
+			["dsw","d129"],
+			["dsw","p123"],
+			["dsw","psw"],
+			["psw","p147"],
+			["psw","d149"],
+			["psw","d129"],
+			["psw","p123"],
+			
+			["p123","d129"],
+			
 			//steering linkage beams:
 			["sd","d118"],
 			["sp","p112"],
@@ -219,9 +297,9 @@
 			{"beamLimitSpring":101000,"beamLimitDamp":7000},
 
 			//Front left:
-			["d127","d129"],
+			["spD","d129"],
 			//Front right:
-			["p125","p123"],
+			["spP","p123"],
 			
 			
 			{"beamSpring":100000,"beamDamp":5000}, //Beamspring=stiffness big#=NO spring. //large damp# overdamping
