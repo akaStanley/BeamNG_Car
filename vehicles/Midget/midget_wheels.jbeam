@@ -21,9 +21,13 @@
 		"hydros": [
         ["id1:","id2:"],
 		  //Left (Driver)
-			["d116","sp",{"factor":-0.2,"steeringWheelLock":460}],	
+			//["d116","sp",{"factor":-0.2,"steeringWheelLock":460}],	
 		  //Right (Passenger)
-			["p113","sd",{"factor":0.2,"steeringWheelLock":460}],			
+			//["p113","sd",{"factor":0.2,"steeringWheelLock":460}],		
+
+			["d145","n137",{"factor":-0.2,"steeringWheelLock":460}], //needs to be 70% shorter than steering arm		
+			["p144","n137",{"factor":0.2,"steeringWheelLock":460}],			
+			
 
 		]
 		//usually hydros go right afte the beams section
@@ -202,13 +206,15 @@
 			["sd",-0.480,0.997,0.0],
 			["sp",0.480,0.997,0.0],
 			
+			//centerpoint of steering
+			["n137",0.0,1.34,-0.06],
 			
 			],
 			
 //--Beams--
 		"beams":[
 			["id1:", "id2:"],
-			
+          {"beamDeform":28300,"beamStrength":"FLT_MAX"},			
 			//["spDb","d139"],
 			//["spDb","d116"],
 			//["spDb","spD"],
