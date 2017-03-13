@@ -49,6 +49,9 @@
 			["sun_sheild", ["window_group"]],
 			["window_wipers", ["window_group"]],
 			["windscreen_rubber_trim", ["window_group"]],
+			["dash_crome", ["window_group"]],
+			["dashboard", ["window_group"]],
+			["dash_bright", ["window_group"]],			
 			//["windshield", ["window_group"]],
 
 			
@@ -57,6 +60,7 @@
 			["wheel_wells", ["MG_Body_group"]],	//temp
 			["door_cards", ["MG_Body_group"]],	//temp
 			["stonechip_sides", ["MG_Body_group"]],	//temp
+			["stonechip_crome", ["MG_Body_group"]],	//temp
 			["tonneau_cover", ["MG_Body_group"]],	//temp
 			["front_grill_crome", ["MG_Body_group"]],	//temp
 			["front_grill_inner_crome", ["MG_Body_group"]],	//temp

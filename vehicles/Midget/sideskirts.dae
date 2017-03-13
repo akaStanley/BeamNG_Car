@@ -5,29 +5,15 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.78.0 commit date:2016-10-24, commit time:12:20, hash:e8299c8</authoring_tool>
     </contributor>
-    <created>2017-03-12T18:56:01</created>
-    <modified>2017-03-12T18:56:01</modified>
+    <created>2017-03-12T20:34:49</created>
+    <modified>2017-03-12T20:34:49</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
-  <library_images>
-    <image id="Untitled_002" name="Untitled_002">
-      <init_from>Untitled.002.png</init_from>
-    </image>
-  </library_images>
+  <library_images/>
   <library_effects>
     <effect id="sideskirts-effect">
       <profile_COMMON>
-        <newparam sid="Untitled_002-surface">
-          <surface type="2D">
-            <init_from>Untitled_002</init_from>
-          </surface>
-        </newparam>
-        <newparam sid="Untitled_002-sampler">
-          <sampler2D>
-            <source>Untitled_002-surface</source>
-          </sampler2D>
-        </newparam>
         <technique sid="common">
           <phong>
             <emission>
@@ -37,7 +23,7 @@
               <color sid="ambient">0 0 0 1</color>
             </ambient>
             <diffuse>
-              <texture texture="Untitled_002-sampler" texcoord="UVMap"/>
+              <color sid="diffuse">0.01758194 0.01749906 0.01725041 1</color>
             </diffuse>
             <specular>
               <color sid="specular">0.01983853 0.01983853 0.01898423 1</color>
@@ -199,9 +185,7 @@
         <instance_geometry url="#Plane_020-mesh" name="stonechip_sides">
           <bind_material>
             <technique_common>
-              <instance_material symbol="sideskirts-material" target="#sideskirts-material">
-                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
-              </instance_material>
+              <instance_material symbol="sideskirts-material" target="#sideskirts-material"/>
             </technique_common>
           </bind_material>
         </instance_geometry>

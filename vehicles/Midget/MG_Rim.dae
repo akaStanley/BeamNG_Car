@@ -5,16 +5,12 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.78.0 commit date:2016-10-24, commit time:12:20, hash:e8299c8</authoring_tool>
     </contributor>
-    <created>2017-03-12T20:12:25</created>
-    <modified>2017-03-12T20:12:25</modified>
+    <created>2017-03-12T20:28:40</created>
+    <modified>2017-03-12T20:28:40</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
-  <library_images>
-    <image id="Wheel_dds_001" name="Wheel_dds_001">
-      <init_from>Wheel.dds.001.dds</init_from>
-    </image>
-  </library_images>
+  <library_images/>
   <library_effects>
     <effect id="paint_black-effect">
       <profile_COMMON>
@@ -94,16 +90,6 @@
     </effect>
     <effect id="wheel-effect">
       <profile_COMMON>
-        <newparam sid="Wheel_dds_001-surface">
-          <surface type="2D">
-            <init_from>Wheel_dds_001</init_from>
-          </surface>
-        </newparam>
-        <newparam sid="Wheel_dds_001-sampler">
-          <sampler2D>
-            <source>Wheel_dds_001-surface</source>
-          </sampler2D>
-        </newparam>
         <technique sid="common">
           <phong>
             <emission>
@@ -113,7 +99,7 @@
               <color sid="ambient">0 0 0 1</color>
             </ambient>
             <diffuse>
-              <texture texture="Wheel_dds_001-sampler" texcoord="UVMap"/>
+              <color sid="diffuse">0.6274416 0.64 0.5480932 1</color>
             </diffuse>
             <specular>
               <color sid="specular">0.5 0.5 0.5 1</color>
@@ -206,15 +192,9 @@
         <instance_geometry url="#Circle_033-mesh" name="rim">
           <bind_material>
             <technique_common>
-              <instance_material symbol="paint_black-material" target="#paint_black-material">
-                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
-              </instance_material>
-              <instance_material symbol="dull_metal-material" target="#dull_metal-material">
-                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
-              </instance_material>
-              <instance_material symbol="wheel-material" target="#wheel-material">
-                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
-              </instance_material>
+              <instance_material symbol="paint_black-material" target="#paint_black-material"/>
+              <instance_material symbol="dull_metal-material" target="#dull_metal-material"/>
+              <instance_material symbol="wheel-material" target="#wheel-material"/>
             </technique_common>
           </bind_material>
         </instance_geometry>

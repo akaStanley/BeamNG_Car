@@ -1,7 +1,7 @@
 singleton Material(midget_paint)
 {
    mapTo = "body";	//the name of the material in blender
-   diffuseMap[0] = "Body_AO.png";
+   diffuseMap[0] = "Body_AO2.png";
    specular[0] = "White";
    specularPower[0] = "200";
    useAnisotropic[0] = "1";
@@ -109,6 +109,23 @@ singleton Material(rubber)
    mapTo = "rubber";	//the name of the material in blender
    diffuseColor[0] = "0.01 0.01 0.01 1";
    specular[0] = "Black";
+   specularPower[0] = "10";
+   translucentBlendOp = "none";
+};
+
+singleton Material(dashboard)
+{
+   mapTo = "dashboard";	//the name of the material in blender
+    diffuseMap[0] = "dashboard.png";
+   specular[0] = "Black";
+   specularPower[0] = "10";
+   translucentBlendOp = "none";
+};
+
+singleton Material(dials)
+{
+   mapTo = "Dials";	//the name of the material in blender
+    diffuseMap[0] = "MG2dials2.png";
    specularPower[0] = "10";
    translucentBlendOp = "none";
 };
