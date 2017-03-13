@@ -214,7 +214,7 @@
 //--Beams--
 		"beams":[
 			["id1:", "id2:"],
-          {"beamDeform":28300,"beamStrength":"FLT_MAX"},			
+          {"beamDeform":50000,"beamStrength":360000},			
 			//["spDb","d139"],
 			//["spDb","d116"],
 			//["spDb","spD"],
@@ -297,7 +297,7 @@
 			//["p144","d145"],
 			
 			
-			{"beamPrecompression":1.235, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.5},
+			{"beamPrecompression":1.8, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.5},
 			{"beamDeform":75000,"beamStrength":360000},
 			{"beamSpring":5000,"beamDamp":3000},
 			{"beamLimitSpring":101000,"beamLimitDamp":7000},
@@ -310,7 +310,7 @@
 			
 			{"beamSpring":100000,"beamDamp":5000}, //Beamspring=stiffness big#=NO spring. //large damp# overdamping
 			{"beamLimitSpring":100000,"beamLimitDamp":7000},
-			{"beamPrecompression":1.07, "beamType":"|BOUNDED", "beamLongBound":0.1, "beamShortBound":0.5},
+			{"beamPrecompression":1.077, "beamType":"|BOUNDED", "beamLongBound":0.5, "beamShortBound":0.6},
 
 			//rear left:
 			["d41","d12"],

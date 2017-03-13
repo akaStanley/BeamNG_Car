@@ -1,7 +1,8 @@
-singleton Material(midget_material1)
+singleton Material(midget_paint)
 {
-   mapTo = "material1";	//the name of the material in blender
-   diffuseMap[0] = "Body_AO.dds";
+   mapTo = "body";	//the name of the material in blender
+   diffuseMap[0] = "Body_AO.png";
+   specular[0] = "White";
    specularPower[0] = "200";
    useAnisotropic[0] = "1";
    castShadows = "1";
@@ -24,7 +25,7 @@ singleton Material(midget_dull_metal)
 
 singleton Material(midget_Rim)
 {
-   mapTo = "crome";	//the name of the material in blender
+   mapTo = "wheel";	//the name of the material in blender
     diffuseMap[0] = "Wheel.dds";
 	specularMap[0] = "Wheel_Reflect.dds";
 	//normalMap[0] = "Wheel_Normals.dds";
@@ -44,7 +45,7 @@ singleton Material(midget_Underbody)
 singleton Material(midget_carpet)
 {
    mapTo = "carpet";	//the name of the material in blender
-   diffuseColor[0] = "0.25 0.25 0.25 1";
+    diffuseMap[0] = "Carpet.dds";
    specular[0] = "Black";
    specularPower[0] = "10";
    translucentBlendOp = "none";
@@ -53,20 +54,61 @@ singleton Material(midget_carpet)
 singleton Material(midget_walls)
 {
    mapTo = "shiny_leather";	//the name of the material in blender
-   diffuseColor[0] = "0.2 0.2 0.2 1";
-   specular[0] = "100";
+    diffuseMap[0] = "walls.png";
+   specular[0] = "Black";
    specularPower[0] = "10";
    translucentBlendOp = "none";
 };
 
-singleton Material(midget_door_Cards)
+singleton Material(door_card)
 {
    mapTo = "door_card";	//the name of the material in blender
-   diffuseColor[0] = "0.2 0.2 0.2 1";
-   specular[0] = "100";
+    diffuseMap[0] = "door_card.png";
+   specular[0] = "Black";
    specularPower[0] = "10";
    translucentBlendOp = "none";
 };
 
+singleton Material(front_emblum)
+{
+   mapTo = "front_emblum";	//the name of the material in blender
+    diffuseMap[0] = "front_emblum.png";
+   specular[0] = "Black";
+   specularPower[0] = "100";
+   translucentBlendOp = "none";
+};
 
+singleton Material(grille)
+{
+   mapTo = "grille";	//the name of the material in blender
+    diffuseMap[0] = "grille3.png";
+   specular[0] = "Black";
+   specularPower[0] = "10";
+   translucentBlendOp = "none";
+};
 
+singleton Material(sideskirts)
+{
+   mapTo = "sideskirts";	//the name of the material in blender
+    diffuseMap[0] = "sideskirts.dds";
+   specular[0] = "Black";
+   specularPower[0] = "75";
+   translucentBlendOp = "none";
+};
+
+singleton Material(chrome)
+{
+   mapTo = "crome";	//the name of the material in blender
+   diffuseColor[0] = "0.470588 0.470588 0.470588 1";
+   specularPower[0] = "800";
+   translucentBlendOp = "none";
+};
+
+singleton Material(rubber)
+{
+   mapTo = "rubber";	//the name of the material in blender
+   diffuseColor[0] = "0.01 0.01 0.01 1";
+   specular[0] = "Black";
+   specularPower[0] = "10";
+   translucentBlendOp = "none";
+};

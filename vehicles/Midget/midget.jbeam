@@ -41,8 +41,16 @@
 
 		"flexbodies": [
 			["mesh", "[group]:", "nonFlexMaterials"],
-			["body", ["MG_Body_group"]],
+			["bodyUni", ["MG_Body_group"]],
 			["window_frame", ["window_group"]],
+			["mirrors", ["window_group"]],
+			["pillar_crome_trim", ["window_group"]],
+			["pillar_gasket", ["window_group"]],
+			["sun_sheild", ["window_group"]],
+			["window_wipers", ["window_group"]],
+			["windscreen_rubber_trim", ["window_group"]],
+			//["windshield", ["window_group"]],
+
 			
 			["walls", ["MG_Body_group"]], //temp
 			["floor", ["MG_Body_group"]], 	//temp
@@ -50,7 +58,11 @@
 			["door_cards", ["MG_Body_group"]],	//temp
 			["stonechip_sides", ["MG_Body_group"]],	//temp
 			["tonneau_cover", ["MG_Body_group"]],	//temp
+			["front_grill_crome", ["MG_Body_group"]],	//temp
+			["front_grill_inner_crome", ["MG_Body_group"]],	//temp
+			["front_ebmlum", ["MG_Body_group"]],	//temp
 
+			
 		 ], //closing flexbody section
 										 
 //--Nodes--
