@@ -24,3 +24,14 @@ https://wiki.beamng.com/Vehicle_Creation_Megapage
 
 Gear ratios: 
 http://www.automobile-catalog.com/curve/1970/1698605/mg_midget_mk_iii.html
+
+
+To Do:
+* Revert from Unibody to subsurfed' segmented body
+* glass/reflective surfaces?
+* Interior door panels
+* Seats
+* front grille
+* lights
+* front/rear bumper
+* Door handles/mirrors

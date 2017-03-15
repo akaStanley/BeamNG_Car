@@ -1,7 +1,7 @@
 singleton Material(midget_paint)
 {
    mapTo = "body";	//the name of the material in blender
-   diffuseMap[0] = "Body_AO2.png";
+   diffuseMap[0] = "Body_AO8.dds";
    specular[0] = "White";
    specularPower[0] = "200";
    useAnisotropic[0] = "1";
@@ -39,6 +39,7 @@ singleton Material(midget_Underbody)
    diffuseColor[0] = "0.15 0.15 0.15 1";
    specular[0] = "Black";
    specularPower[0] = "10";
+   doubleSided = "1"
    translucentBlendOp = "none";
 };
 
