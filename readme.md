@@ -28,6 +28,11 @@ http://www.automobile-catalog.com/curve/1970/1698605/mg_midget_mk_iii.html
 
 To Do:
 * Revert from Unibody to subsurfed' segmented body
+	* start from body
+	* subsurf 1x (for game)
+	* Mark as "crease edge/ sharp edge" to keep corners without making straight lines geometry along hood curves by door pillar
+	* duplicate and subsurf a _lot_ more times
+	* Bake selected to active for the high res one, to the 1x subsurf for game.
 * glass/reflective surfaces?
 * Interior door panels
 * Seats
