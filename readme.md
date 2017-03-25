@@ -2,7 +2,7 @@
 Car in BeamNG 1/29/11-3/25/17  
 https://en.wikipedia.org/wiki/MG_Midget  
 
-![A recent progress picture.](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/readmeHeader.PNG)
+![A recent progress picture.](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/rHeader.PNG)
 
 ##Notes:  
 Notepad ++:  
