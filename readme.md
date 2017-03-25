@@ -5,9 +5,9 @@ https://en.wikipedia.org/wiki/MG_Midget
 ![A recent progress picture.](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/rHeader.PNG)
 
 
-[![Demo Video](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/videoThumb.PNG "Watch a 1m Demo Video here:") 
+[![Demo Video](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/videoThumb.PNG)](https://youtu.be/WbfcNteB2eI "Watch a 1m Demo Video here:")
 
-
+https://youtu.be/WbfcNteB2eI
 ## Progress pictures (old -> new):
 Testing out my node/beam skills witha cube:  
 ![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/cube%201%20working.PNG)
