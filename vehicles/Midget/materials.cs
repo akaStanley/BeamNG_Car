@@ -81,6 +81,16 @@ singleton Material(front_emblum)
    specularPower[0] = "200";
    translucentBlendOp = "none";
 };
+singleton Material(rear_emblum)
+{
+   mapTo = "rear_emblum";	//the name of the material in blender
+   diffuseMap[0] = "Rear_emblum.png";
+   specularMap[0] = "vehicles/common/null.dds";
+
+   //specular[0] = "Black";
+   specularPower[0] = "200";
+   translucentBlendOp = "none";
+};
 
 singleton Material(grille)
 {

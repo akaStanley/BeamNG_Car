@@ -59,6 +59,7 @@
 			["floor", ["MG_Body_group"]], 	//temp
 			["wheel_wells", ["MG_Body_group"]],	//temp
 			["door_cards", ["MG_Body_group"]],	//temp
+			["door_handle", ["MG_Body_group"]],	//temp
 			["stonechip_sides", ["MG_Body_group"]],	//temp
 			["stonechip_crome", ["MG_Body_group"]],	//temp
 			["tonneau_cover", ["MG_Body_group"]],	//temp
@@ -94,7 +95,14 @@
 			["Bumper_rear", ["brakelights"]],	//temp
 			["Bumper_rear_override", ["brakelights"]],	//temp
 			["Bumper_rear_override_rubber", ["brakelights"]],	//temp
-		 ], //closing flexbody section
+			["rear_plate", ["brakelights"]],	//temp
+			["mg_gascap_gasket", ["brakelights"]],	//temp
+			["mg_gascap", ["brakelights"]],	//temp			
+			
+			["trunk_handle", ["trunk"]],	//temp
+			["rear_emblum", ["trunk"]],	//temp
+
+			], //closing flexbody section
 										 
 //--Nodes--
 		"nodes":[
@@ -106,8 +114,6 @@
 		{"selfCollision":true},
 		{"group":"MG_Body_group"},
 			["n2",0.0,-2.096,0.0],
-			["n5",0.0,-2.01,0.398],
-			["n18",0.0,-1.554,0.574],
 			["n30",0.0,-1.429,0.584],
 			["n46",0.0,-1.115,0.608],
 			["n56",0.0,-0.991,0.617],
@@ -119,7 +125,6 @@
 			["n163",0.0,1.713,0.355],
 			["p10",0.763,-1.603,0.0],
 			["p14",0.725,-1.554,0.514],
-			["p16",0.388,-1.554,0.553],
 			["p23",0.314,-1.433,0.305],
 			["p27",0.763,-1.429,0.323],
 			["p28",0.705,-1.429,0.518],
@@ -154,7 +159,6 @@
 			["p152",0.739,1.53,0.0],
 
 			["d13",-0.763,-1.603,0.0],
-			["d20",-0.388,-1.554,0.553],
 			["d21",-0.725,-1.554,0.514],
 			["d26",-0.314,-1.433,0.305],
 			["d31",-0.388,-1.429,0.57],
@@ -196,6 +200,13 @@
 		//{"group":"Rear_bumper"},
 		
 		//{"group":""}, //closing group
+		
+		{"group":"trunk"},
+			["n5",0.0,-2.01,0.398],
+			["n18",0.0,-1.554,0.574],
+			["d20",-0.388,-1.554,0.553],
+			["p16",0.388,-1.554,0.553],
+		{"group":""}, //closing group
 		
 		{"group":"seatsGroup"},
 			["d72",-0.388,-0.76,0.632],
