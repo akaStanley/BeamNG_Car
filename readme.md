@@ -4,6 +4,36 @@ https://en.wikipedia.org/wiki/MG_Midget
 
 ![A recent progress picture.](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/rHeader.PNG)
 
+## Progress pictures (old -> new):
+Testing out my node/beam skills witha cube:  
+![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/cube%201%20working.PNG)
+Getting a rough car node/beam working:  
+![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/Car%20body%20kinda%20working.PNG)
+Wheels working:  
+![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/wheels%20working.PNG)
+Importing the mesh into the game, sans texture:  
+![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/No%20Texture.PNG)
+Adding an ambient occlusion texture to the body:  
+![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/Texture%20working.PNG)
+Working on the engine and drivetrain:  
+![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/engine%20almost%20working.PNG)
+Working engine/drivetrain and accurate power transfer (in Blue):  
+![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/engine%20working.PNG)
+Tuning to accurate torque and vehicle weight:  
+![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/engine&wieght.PNG)
+Adding default game rims & tires:  
+![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/Tires%20working.PNG)
+Replacing with correctly modeled rims:  
+![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/Rims%20added.PNG)
+Some exterior details added:  
+![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/exterior%20details.PNG)
+Interior detials:  
+![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/Interior%20Details.PNG)
+More interior detials:  
+![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/interior.PNG)
+Finished!:  
+![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/final.PNG)
+
 ##Notes:  
 Notepad ++:  
 Find: & or $ (end of line)  
