@@ -39,7 +39,7 @@ singleton Material(midget_Underbody)
    diffuseColor[0] = "0.15 0.15 0.15 1";
    specular[0] = "Black";
    specularPower[0] = "10";
-   doubleSided = "1"
+   doubleSided = "1";
    translucentBlendOp = "none";
 };
 
