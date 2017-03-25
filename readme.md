@@ -4,6 +4,10 @@ https://en.wikipedia.org/wiki/MG_Midget
 
 ![A recent progress picture.](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/rHeader.PNG)
 
+
+[![Demo Video](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/videoThumb.PNG "Watch a 1m Demo Video here:") 
+
+
 ## Progress pictures (old -> new):
 Testing out my node/beam skills witha cube:  
 ![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/cube%201%20working.PNG)
@@ -26,8 +30,11 @@ Working on the engine and drivetrain:
 Working engine/drivetrain and accurate power transfer (in Blue):  
 ![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/engine%20working.PNG)
 
-Tuning to accurate torque and vehicle weight:  
+Tuning to accurate torque and but wrong vehicle weight:  
 ![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/engine&wieght.PNG)
+
+Adding engine weight nodes for more accurate wieght:
+![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/correctWeight.PNG)
 
 Adding default game rims & tires:  
 ![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/Tires%20working.PNG)
@@ -43,6 +50,9 @@ Interior detials:
 
 More interior detials:  
 ![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/interior.PNG)
+
+Deformation after a crash.:  
+![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/crashed_detail.PNG)
 
 Finished!:  
 ![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/final.PNG)
