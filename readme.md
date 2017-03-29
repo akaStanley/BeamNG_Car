@@ -1,5 +1,6 @@
 #Spencer Kulbacki  
 Car in BeamNG 1/29/17-3/25/17  
+Re-creating a 1974 MG Midget as accuratley as possible in BeamNG.Drive.  
 https://en.wikipedia.org/wiki/MG_Midget  
 
 ![A recent progress picture.](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/rHeader.PNG)  
@@ -51,7 +52,7 @@ More interior detials:
 ![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/interior.PNG)
 
 Deformation after a crash.:  
-![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/crashed_detail.PNG)
+![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/crashed_detail.png)
 
 Finished!:  
 ![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/final.PNG)
