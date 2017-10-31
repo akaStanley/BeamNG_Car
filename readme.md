@@ -1,4 +1,4 @@
-#Spencer Kulbacki  
+# Spencer Kulbacki  
 Car in BeamNG 1/29/17-3/25/17  
 Re-creating a 1974 MG Midget as accuratley as possible in BeamNG.Drive.  
 https://en.wikipedia.org/wiki/MG_Midget  
@@ -33,7 +33,7 @@ Working engine/drivetrain and accurate power transfer (in Blue):
 Tuning to accurate torque and but wrong vehicle weight:  
 ![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/engine&wieght.PNG)
 
-Adding engine weight nodes for more accurate wieght:
+Adding engine weight nodes for more accurate wieght:  
 ![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/correctWeight.PNG)
 
 Adding default game rims & tires:  
@@ -58,14 +58,14 @@ Finished!:
 ![progress pictures](https://github.com/akaStanley/BeamNG_Car/blob/master/Pictures/Progress%20Pics/final.PNG)
 
 
-##Notes:  
+## Notes:  
 Notepad ++:  
 Find: & or $ (end of line)  
 Find: ^ (start of line) 
 
 http://www.quickdiff.com/
-http://textmechanic.com/text-tools/basic-text-tools/sort-text-lines/
-http://textmechanic.com/text-tools/basic-text-tools/remove-duplicate-lines/
+http://textmechanic.com/text-tools/basic-text-tools/sort-text-lines/  
+http://textmechanic.com/text-tools/basic-text-tools/remove-duplicate-lines/  
 folder path goes like this:   
 car.zip>vehicles>car>allthestuff  
 
@@ -76,5 +76,5 @@ https://www.beamng.com/threads/tutorial-vehicle-performance-and-components-modif
 
 https://wiki.beamng.com/Vehicle_Creation_Megapage
 
-Gear ratios: 
+Gear ratios:  
 http://www.automobile-catalog.com/curve/1970/1698605/mg_midget_mk_iii.html
